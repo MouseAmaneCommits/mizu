@@ -40,6 +40,28 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
+../vertex_array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
+../../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_buffer.h
+../vertex_buffer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
+../../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
+../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+vertex_buffer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
+../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
 C:/Users/Opact/Desktop/mizu engine/testbed/src/main.c
 stdio.h
 -
@@ -47,6 +69,14 @@ stdio.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.h
 ../../engine/src/core/logger.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
+../../engine/src/renderer/object/vertex_array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
+../../engine/src/renderer/object/vertex_buffer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
+../../engine/src/renderer/object/opengl/ogl_vertex_array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
+../../engine/src/renderer/object/opengl/ogl_vertex_buffer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_buffer.h
 glad/glad.h
 -
 

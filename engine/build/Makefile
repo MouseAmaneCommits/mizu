@@ -331,6 +331,60 @@ src/renderer/context/context.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/context/context.c.s
 .PHONY : src/renderer/context/context.c.s
 
+src/renderer/object/opengl/ogl_vertex_array.obj: src/renderer/object/opengl/ogl_vertex_array.c.obj
+
+.PHONY : src/renderer/object/opengl/ogl_vertex_array.obj
+
+# target to build an object file
+src/renderer/object/opengl/ogl_vertex_array.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj
+.PHONY : src/renderer/object/opengl/ogl_vertex_array.c.obj
+
+src/renderer/object/opengl/ogl_vertex_array.i: src/renderer/object/opengl/ogl_vertex_array.c.i
+
+.PHONY : src/renderer/object/opengl/ogl_vertex_array.i
+
+# target to preprocess a source file
+src/renderer/object/opengl/ogl_vertex_array.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.i
+.PHONY : src/renderer/object/opengl/ogl_vertex_array.c.i
+
+src/renderer/object/opengl/ogl_vertex_array.s: src/renderer/object/opengl/ogl_vertex_array.c.s
+
+.PHONY : src/renderer/object/opengl/ogl_vertex_array.s
+
+# target to generate assembly for a file
+src/renderer/object/opengl/ogl_vertex_array.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.s
+.PHONY : src/renderer/object/opengl/ogl_vertex_array.c.s
+
+src/renderer/object/opengl/ogl_vertex_buffer.obj: src/renderer/object/opengl/ogl_vertex_buffer.c.obj
+
+.PHONY : src/renderer/object/opengl/ogl_vertex_buffer.obj
+
+# target to build an object file
+src/renderer/object/opengl/ogl_vertex_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj
+.PHONY : src/renderer/object/opengl/ogl_vertex_buffer.c.obj
+
+src/renderer/object/opengl/ogl_vertex_buffer.i: src/renderer/object/opengl/ogl_vertex_buffer.c.i
+
+.PHONY : src/renderer/object/opengl/ogl_vertex_buffer.i
+
+# target to preprocess a source file
+src/renderer/object/opengl/ogl_vertex_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.i
+.PHONY : src/renderer/object/opengl/ogl_vertex_buffer.c.i
+
+src/renderer/object/opengl/ogl_vertex_buffer.s: src/renderer/object/opengl/ogl_vertex_buffer.c.s
+
+.PHONY : src/renderer/object/opengl/ogl_vertex_buffer.s
+
+# target to generate assembly for a file
+src/renderer/object/opengl/ogl_vertex_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.s
+.PHONY : src/renderer/object/opengl/ogl_vertex_buffer.c.s
+
 src/renderer/renderer.obj: src/renderer/renderer.c.obj
 
 .PHONY : src/renderer/renderer.obj
@@ -388,6 +442,12 @@ help:
 	@echo ... src/renderer/context/context.obj
 	@echo ... src/renderer/context/context.i
 	@echo ... src/renderer/context/context.s
+	@echo ... src/renderer/object/opengl/ogl_vertex_array.obj
+	@echo ... src/renderer/object/opengl/ogl_vertex_array.i
+	@echo ... src/renderer/object/opengl/ogl_vertex_array.s
+	@echo ... src/renderer/object/opengl/ogl_vertex_buffer.obj
+	@echo ... src/renderer/object/opengl/ogl_vertex_buffer.i
+	@echo ... src/renderer/object/opengl/ogl_vertex_buffer.s
 	@echo ... src/renderer/renderer.obj
 	@echo ... src/renderer/renderer.i
 	@echo ... src/renderer/renderer.s

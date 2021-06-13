@@ -42,6 +42,22 @@ CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.c
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.h
 
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/KHR/khrplatform.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/glad/glad.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/core/logger.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.c
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/vertex_array.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/vertex_buffer.h
+
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../../vendor/include/KHR/khrplatform.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../../vendor/include/glad/glad.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.c
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/vertex_buffer.h
+
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/platform/platform.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/context/api/opengl_context.h
