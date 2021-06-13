@@ -1,0 +1,52 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../vendor/include/KHR/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+../../vendor/include/glad/glad.h
+KHR/khrplatform.h
+-
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.c
+opengl_context.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.h
+memory.h
+-
+../../../core/logger.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
+Windows.h
+-
+glad/glad.h
+-
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.h
+../context.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
+../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+../../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+

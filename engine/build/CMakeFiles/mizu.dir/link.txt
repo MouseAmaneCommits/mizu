@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\mizu.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\mizu.dir/objects.a @CMakeFiles\mizu.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe    -shared -o libmizu.dll -Wl,--out-implib,libmizu.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\mizu.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\mizu.dir\linklibs.rsp

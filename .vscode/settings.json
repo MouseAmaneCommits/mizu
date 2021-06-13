@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "platform.h": "c",
+        "renderer.h": "c",
+        "logger.h": "c",
+        "stdio.h": "c"
+    }
+}

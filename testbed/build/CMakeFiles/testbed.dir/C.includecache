@@ -1,0 +1,52 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../vendor/include/KHR/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+../../vendor/include/glad/glad.h
+KHR/khrplatform.h
+-
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+layer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
+../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/testbed/src/main.c
+stdio.h
+-
+../../engine/src/core/application.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.h
+../../engine/src/core/logger.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
+glad/glad.h
+-
+
