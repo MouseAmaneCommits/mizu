@@ -12,6 +12,7 @@ typedef struct {
     void (*init)(void);
     void (*begin_frame)(void);
     void (*end_frame)(void);
+    void(*reshape)(u32, u32);
 }m_context;
 
 MAPI void m_init_context(m_context* context, m_platform* platform, m_renderer_api api);

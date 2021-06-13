@@ -65,9 +65,14 @@ void ogl_end(){
     #endif
 }
 
+void ogl_reshape(u32 width, u32 height){
+	glViewport(0, 0, width, height);
+}
+
 void m_init_context_ogl(m_context* context){
     context->init = ogl_init;
     context->begin_frame = ogl_begin;
     context->end_frame = ogl_end;
+	context->reshape = ogl_reshape;
     self = context;
 }

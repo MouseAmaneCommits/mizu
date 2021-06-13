@@ -22,10 +22,13 @@ CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform.c
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform_backend.h
 
+CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj: ../src/core/logger.h
 CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj: ../src/platform/platform.h
 CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj: ../src/platform/platform_backend.c
 CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj: ../src/platform/platform_backend.h
+CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj: ../src/renderer/context/context.h
+CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj: ../src/renderer/renderer.h
 
 CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj: ../../vendor/include/KHR/khrplatform.h
 CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj: ../../vendor/include/glad/glad.h

@@ -1,5 +1,9 @@
 #include "platform_backend.h"
 
+#include "../renderer/renderer.h"
+
+#include "../core/logger.h"
+
 #ifdef MIZU_PLATFORM_WINDOWS
 #include <windows.h>
 
@@ -8,6 +12,10 @@ LRESULT window_proc(HWND hWnd,UINT Msg,WPARAM wParam,LPARAM lParam){
         case WM_CLOSE:
             PostQuitMessage(0);
             return;
+        case WM_SIZE:
+            M_INFO("new width:%i new height:%i", LOWORD(lParam), HIWORD(lParam));
+            if(m_initialized_renderer())
+                m_reshape_renderer(LOWORD(lParam), HIWORD(lParam));
     }
     
     return DefWindowProc(hWnd, Msg, wParam, lParam);
@@ -33,7 +41,7 @@ void m_init_platform_for_win32(m_platform* self){
     wc.style = NULL;
     RegisterClass(&wc);
 
-    HWND hwnd = CreateWindowEx(NULL, "class", self->title, WS_SYSMENU | WS_MINIMIZEBOX, self->x, self->y, self->width, self->height, NULL, NULL, instance, NULL);
+    HWND hwnd = CreateWindowEx(NULL, "class", self->title, WS_SIZEBOX | WS_MAXIMIZEBOX | WS_SYSMENU | WS_MINIMIZEBOX, self->x, self->y, self->width, self->height, NULL, NULL, instance, NULL);
     ShowWindow(hwnd, SW_SHOW);
 
     memcpy(self->unimplemented_data, &hwnd, sizeof(hwnd));

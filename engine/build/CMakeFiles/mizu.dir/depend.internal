@@ -23,10 +23,13 @@ CMakeFiles/mizu.dir/src/platform/platform.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.h
 CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj
+ C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.c
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
 CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj
  ../../vendor/include/KHR/khrplatform.h
  ../../vendor/include/glad/glad.h

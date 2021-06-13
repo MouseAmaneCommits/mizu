@@ -6,6 +6,7 @@
 #include <memory.h>
 
 static m_context* context;
+static b8 initialized = FALSE;
 
 
 void m_init_renderer(m_platform* platform, m_renderer_api api){
@@ -14,6 +15,7 @@ void m_init_renderer(m_platform* platform, m_renderer_api api){
 
     m_init_context(context, platform, api);
     context->init();
+    initialized = TRUE;
 }
 
 void m_begin_frame(){
@@ -22,4 +24,12 @@ void m_begin_frame(){
 
 void m_end_frame(){
     context->end_frame();
+}
+
+void m_reshape_renderer(u32 width, u32 height){
+    context->reshape(width, height);
+}
+
+b8 m_initialized_renderer(){
+    return initialized;
 }

@@ -6,65 +6,43 @@
 
 #IncludeRegexTransform: 
 
-../../vendor/include/KHR/khrplatform.h
-stdint.h
--
-inttypes.h
--
-stdint.h
--
-
-../../vendor/include/glad/glad.h
-KHR/khrplatform.h
--
-
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.c
-ogl_vertex_array.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
-glad/glad.h
--
-malloc.h
--
-memory.h
--
-../../../core/logger.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.c
+platform_backend.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.h
+../renderer/renderer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
+../core/logger.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
+windows.h
+-
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
-../vertex_array.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
-../../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.h
+../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_buffer.c
-ogl_vertex_buffer.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_buffer.h
-memory.h
--
-malloc.h
--
-glad/glad.h
--
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_buffer.h
-../vertex_buffer.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
-../../../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
 ../../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-vertex_buffer.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
+../../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
-../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
+context/context.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
+../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 
