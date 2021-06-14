@@ -2,9 +2,11 @@
 
 #define UNIMPLEMENTED_DATA_SIZE 6553
 
+#include <time.h>
 #include <glad/glad.h>
 #include <malloc.h>
 #include <memory.h>
+#include <sys/time.h>
 
 #include "../../../core/logger.h"
 
@@ -36,14 +38,38 @@ static void ogl_add_vbo(m_vertex_array* self, m_vertex_buffer* buffer){
 }
 
 static void ogl_draw(m_vertex_array* self){
+    struct timeval start, stop;
+    double secs = 0;
+    gettimeofday(&start, NULL);
+
+
     ogl_bind(self);
     glEnableVertexAttribArray(self->vbos[0]->layout->index);
-    glDrawArrays(GL_TRIANGLES, 0, self->vbos[0]->length/3);
+    
+    if(!self->ibo_bound)
+        glDrawArrays(GL_TRIANGLES, 0, self->vbos[0]->length/3);
+    else{
+        self->ibo->bind(self->ibo);
+        glDrawElements(GL_TRIANGLES, self->ibo->count, GL_UNSIGNED_INT, NULL);
+        self->ibo->unbind(self->ibo);
+    }
+
     glDisableVertexAttribArray(self->vbos[0]->layout->index);
     ogl_unbind(self);
+
+    gettimeofday(&stop, NULL);
+    secs = (double)(stop.tv_usec - start.tv_usec) / 1000000 + (double)(stop.tv_sec - start.tv_sec);
+    printf("renderer(elapsed): %f\n",secs);
+}
+
+static void ogl_bind_ibo(m_vertex_array* self, m_index_buffer* ibo){
+    self->ibo_bound = TRUE;
+    self->ibo = ibo;
 }
 
 void m_init_vertex_array_opengl(m_vertex_array* array){
+    array->ibo_bound = FALSE;
+    
     array->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
     u32 id = 0;
     glGenVertexArrays(1, &id);
@@ -53,4 +79,5 @@ void m_init_vertex_array_opengl(m_vertex_array* array){
     array->unbind = ogl_unbind;
     array->add_vbo = ogl_add_vbo;
     array->draw = ogl_draw;
+    array->bind_ibo = ogl_bind_ibo;
 }

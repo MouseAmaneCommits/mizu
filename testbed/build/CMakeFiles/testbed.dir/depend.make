@@ -15,6 +15,8 @@ CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engin
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/math/math.h
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/math/vector.h
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/platform/platform.h
+CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/index_buffer.h
+CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/opengl/ogl_index_buffer.h
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/opengl/ogl_shader.h
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/opengl/ogl_vertex_buffer.h

@@ -3,18 +3,28 @@
 #include "../../engine/src/core/logger.h"
 #include "../../engine/src/renderer/object/opengl/ogl_vertex_array.h"
 #include "../../engine/src/renderer/object/opengl/ogl_vertex_buffer.h"
+#include "../../engine/src/renderer/object/opengl/ogl_index_buffer.h"
 #include "../../engine/src/renderer/object/opengl/ogl_shader.h"
 
+
+#include <windows.h>
 #include <glad/glad.h>
 
 static float vertices[] = {
-    -0.5f, -0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f,
-     0.0f,  0.5f, 0.0f
+     0.5f,  0.5f, 0.0f,  // top right
+     0.5f, -0.5f, 0.0f,  // bottom right
+    -0.5f, -0.5f, 0.0f,  // bottom left
+    -0.5f,  0.5f, 0.0f   // top left 
+};
+
+static u32 indices[] = {
+    0, 1, 3,   // first triangle
+    1, 2, 3    // second triangle
 };
 
 static m_shader shader;
 static m_vertex_buffer vbo;
+static m_index_buffer ibo;
 static m_vertex_array array;
 static m_vertex_buffer_layout layout;
 static mat4 view;
@@ -33,13 +43,19 @@ void fl_start(){
     vbo.set_layout(&vbo, &layout);
 
     array.add_vbo(&array, &vbo);
+    
+    m_init_index_buffer_opengl(&ibo, indices, sizeof(indices));
+    
+    array.bind_ibo(&array, &ibo);
 
     m_init_shader_opengl(&shader, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
 }
 
 void fl_update(){
     shader.bind(&shader);
-    m_translate_matrix(&view, m_init_vec3(0.01f, 0.0f, 0.0f));
+    
+        m_translate_matrix(&view, m_init_vec3(0.01f, 0.0f, 0.0f));
+    
     shader.set_mat4(&shader, "view", view);
     shader.set_mat4(&shader, "proj", proj);
     array.draw(&array);

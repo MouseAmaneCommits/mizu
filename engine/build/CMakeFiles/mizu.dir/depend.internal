@@ -54,6 +54,13 @@ CMakeFiles/mizu.dir/src/renderer/context/context.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.c
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj
+ ../../vendor/include/KHR/khrplatform.h
+ ../../vendor/include/glad/glad.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/index_buffer.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_index_buffer.c
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_index_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj
  ../../vendor/include/KHR/khrplatform.h
  ../../vendor/include/glad/glad.h
@@ -70,6 +77,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj
  ../../vendor/include/glad/glad.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/index_buffer.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.c
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h

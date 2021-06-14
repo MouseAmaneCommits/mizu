@@ -54,6 +54,13 @@ CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.c
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.h
 
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../../vendor/include/KHR/khrplatform.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../../vendor/include/glad/glad.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/renderer/object/index_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/renderer/object/opengl/ogl_index_buffer.c
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/renderer/object/opengl/ogl_index_buffer.h
+
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../../vendor/include/KHR/khrplatform.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/core/logger.h
@@ -69,6 +76,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../ven
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/core/logger.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/index_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.c
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/vertex_array.h

@@ -385,6 +385,33 @@ src/renderer/context/context.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/context/context.c.s
 .PHONY : src/renderer/context/context.c.s
 
+src/renderer/object/opengl/ogl_index_buffer.obj: src/renderer/object/opengl/ogl_index_buffer.c.obj
+
+.PHONY : src/renderer/object/opengl/ogl_index_buffer.obj
+
+# target to build an object file
+src/renderer/object/opengl/ogl_index_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj
+.PHONY : src/renderer/object/opengl/ogl_index_buffer.c.obj
+
+src/renderer/object/opengl/ogl_index_buffer.i: src/renderer/object/opengl/ogl_index_buffer.c.i
+
+.PHONY : src/renderer/object/opengl/ogl_index_buffer.i
+
+# target to preprocess a source file
+src/renderer/object/opengl/ogl_index_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.i
+.PHONY : src/renderer/object/opengl/ogl_index_buffer.c.i
+
+src/renderer/object/opengl/ogl_index_buffer.s: src/renderer/object/opengl/ogl_index_buffer.c.s
+
+.PHONY : src/renderer/object/opengl/ogl_index_buffer.s
+
+# target to generate assembly for a file
+src/renderer/object/opengl/ogl_index_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.s
+.PHONY : src/renderer/object/opengl/ogl_index_buffer.c.s
+
 src/renderer/object/opengl/ogl_shader.obj: src/renderer/object/opengl/ogl_shader.c.obj
 
 .PHONY : src/renderer/object/opengl/ogl_shader.obj
@@ -529,6 +556,9 @@ help:
 	@echo ... src/renderer/context/context.obj
 	@echo ... src/renderer/context/context.i
 	@echo ... src/renderer/context/context.s
+	@echo ... src/renderer/object/opengl/ogl_index_buffer.obj
+	@echo ... src/renderer/object/opengl/ogl_index_buffer.i
+	@echo ... src/renderer/object/opengl/ogl_index_buffer.s
 	@echo ... src/renderer/object/opengl/ogl_shader.obj
 	@echo ... src/renderer/object/opengl/ogl_shader.i
 	@echo ... src/renderer/object/opengl/ogl_shader.s
