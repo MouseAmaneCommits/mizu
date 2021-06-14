@@ -223,6 +223,60 @@ src/core/logger.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/core/logger.c.s
 .PHONY : src/core/logger.c.s
 
+src/math/mat4.obj: src/math/mat4.c.obj
+
+.PHONY : src/math/mat4.obj
+
+# target to build an object file
+src/math/mat4.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/math/mat4.c.obj
+.PHONY : src/math/mat4.c.obj
+
+src/math/mat4.i: src/math/mat4.c.i
+
+.PHONY : src/math/mat4.i
+
+# target to preprocess a source file
+src/math/mat4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/math/mat4.c.i
+.PHONY : src/math/mat4.c.i
+
+src/math/mat4.s: src/math/mat4.c.s
+
+.PHONY : src/math/mat4.s
+
+# target to generate assembly for a file
+src/math/mat4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/math/mat4.c.s
+.PHONY : src/math/mat4.c.s
+
+src/math/vector.obj: src/math/vector.c.obj
+
+.PHONY : src/math/vector.obj
+
+# target to build an object file
+src/math/vector.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/math/vector.c.obj
+.PHONY : src/math/vector.c.obj
+
+src/math/vector.i: src/math/vector.c.i
+
+.PHONY : src/math/vector.i
+
+# target to preprocess a source file
+src/math/vector.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/math/vector.c.i
+.PHONY : src/math/vector.c.i
+
+src/math/vector.s: src/math/vector.c.s
+
+.PHONY : src/math/vector.s
+
+# target to generate assembly for a file
+src/math/vector.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/math/vector.c.s
+.PHONY : src/math/vector.c.s
+
 src/platform/platform.obj: src/platform/platform.c.obj
 
 .PHONY : src/platform/platform.obj
@@ -457,6 +511,12 @@ help:
 	@echo ... src/core/logger.obj
 	@echo ... src/core/logger.i
 	@echo ... src/core/logger.s
+	@echo ... src/math/mat4.obj
+	@echo ... src/math/mat4.i
+	@echo ... src/math/mat4.s
+	@echo ... src/math/vector.obj
+	@echo ... src/math/vector.i
+	@echo ... src/math/vector.s
 	@echo ... src/platform/platform.obj
 	@echo ... src/platform/platform.i
 	@echo ... src/platform/platform.s

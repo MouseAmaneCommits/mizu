@@ -17,6 +17,15 @@ CMakeFiles/mizu.dir/src/core/logger.c.obj: ../src/core/logger.c
 CMakeFiles/mizu.dir/src/core/logger.c.obj: ../src/core/logger.h
 CMakeFiles/mizu.dir/src/core/logger.c.obj: ../src/defines.h
 
+CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/math/mat4.c
+CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/math/mat4.h
+CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/math/vector.h
+
+CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/math/vector.c
+CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/math/vector.h
+
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform.c
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform.h
@@ -49,6 +58,9 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../../vendor/in
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/core/logger.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/math/mat4.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/math/math.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/math/vector.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/opengl/ogl_shader.c
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/opengl/ogl_shader.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/shader.h

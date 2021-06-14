@@ -104,10 +104,81 @@ static char* read_file(const char* file_name){
     return buffer;
 }
 
+static b8 ogl_get_uniform_location(m_shader* self, const char* name, u32* loc){
+    u32 shader_id = 0;
+    
+    memcpy(&shader_id, self->unimplemented_data, sizeof(u32));
+
+    int location = glGetUniformLocation(shader_id, name);
+
+    if(location == -1){
+        return FALSE;
+    }
+
+    (*loc) = location;
+
+    return TRUE;
+}
+
+static void ogl_set_float(m_shader* self, const char* name, float value){
+    u32 location = 0;
+    if(!ogl_get_uniform_location(self, name, &location)){
+        M_ERROR("Failed to find uniform location!");
+        return;
+    }
+
+    glUniform1f(location, value);
+}
+
+static void ogl_set_vec2(m_shader* self, const char* name, vec2 value){
+    u32 location = 0;
+    if(!ogl_get_uniform_location(self, name, &location)){
+        M_ERROR("Failed to find uniform location!");
+        return;
+    }
+
+    glUniform2f(location, value.x, value.y);
+}
+
+static void ogl_set_vec3(m_shader* self, const char* name, vec3 value){
+    u32 location = 0;
+    if(!ogl_get_uniform_location(self, name, &location)){
+        M_ERROR("Failed to find uniform location!");
+        return;
+    }
+
+    glUniform3f(location, value.x, value.y, value.z);
+}
+
+static void ogl_set_vec4(m_shader* self, const char* name, vec4 value){
+    u32 location = 0;
+    if(!ogl_get_uniform_location(self, name, &location)){
+        M_ERROR("Failed to find uniform location!");
+        return;
+    }
+
+    glUniform4f(location, value.x, value.y, value.z, value.w);
+}
+
+static void ogl_set_mat4(m_shader* self, const char* name, mat4 value){
+    u32 location = 0;
+    if(!ogl_get_uniform_location(self, name, &location)){
+        M_ERROR("Failed to find uniform location!");
+        return;
+    }
+
+    glUniformMatrix4fv(location, 1, GL_FALSE, m_convert_matrix_to_float_array(value));
+}
+
 void m_init_shader_opengl(m_shader* self, const char* vFilename, const char* fFilename){
     self->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
     ogl_create_shader(self, read_file(vFilename), read_file(fFilename));
     
     self->bind = ogl_bind;
     self->unbind = ogl_unbind;
+    self->set_float = ogl_set_float;
+    self->set_vec2 = ogl_set_vec2;
+    self->set_vec3 = ogl_set_vec3;
+    self->set_vec4 = ogl_set_vec4;
+    self->set_mat4 = ogl_set_mat4;
 }

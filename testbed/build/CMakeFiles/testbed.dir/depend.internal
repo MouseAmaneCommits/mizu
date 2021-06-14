@@ -12,6 +12,9 @@ CMakeFiles/testbed.dir/src/main.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h

@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj"
   "CMakeFiles/mizu.dir/src/core/application.c.obj"
   "CMakeFiles/mizu.dir/src/core/logger.c.obj"
+  "CMakeFiles/mizu.dir/src/math/mat4.c.obj"
+  "CMakeFiles/mizu.dir/src/math/vector.c.obj"
   "CMakeFiles/mizu.dir/src/platform/platform.c.obj"
   "CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj"
   "CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj"

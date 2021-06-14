@@ -7,6 +7,10 @@
         "vertex_array.h": "c",
         "vertex_buffer.h": "c",
         "ogl_vertex_array.h": "c",
-        "glad.h": "c"
-    }
+        "glad.h": "c",
+        "mat4.h": "c"
+    },
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 8,
+    "editor.cursorSmoothCaretAnimation": true 
 }

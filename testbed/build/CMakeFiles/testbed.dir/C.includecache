@@ -36,6 +36,22 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+vector.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
+mat4.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+vector.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
 C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
@@ -61,6 +77,8 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
 ../../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+../../math/math.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
 ../../defines.h

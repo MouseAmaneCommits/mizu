@@ -17,6 +17,15 @@ CMakeFiles/mizu.dir/src/core/logger.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.c
  C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+CMakeFiles/mizu.dir/src/math/mat4.c.obj
+ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.c
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+CMakeFiles/mizu.dir/src/math/vector.c.obj
+ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.c
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.c
@@ -50,6 +59,9 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj
  ../../vendor/include/glad/glad.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.c
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h

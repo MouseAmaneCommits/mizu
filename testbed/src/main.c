@@ -17,8 +17,14 @@ static m_shader shader;
 static m_vertex_buffer vbo;
 static m_vertex_array array;
 static m_vertex_buffer_layout layout;
+static mat4 view;
+static mat4 proj;
 
 void fl_start(){
+    view = m_identity_matrix();
+    // print_list(m_convert_matrix_to_float_array(view));
+    proj = m_identity_matrix();
+
     layout.index = 0;
     layout.size = 3;
 
@@ -33,6 +39,9 @@ void fl_start(){
 
 void fl_update(){
     shader.bind(&shader);
+    m_translate_matrix(&view, m_init_vec3(0.01f, 0.0f, 0.0f));
+    shader.set_mat4(&shader, "view", view);
+    shader.set_mat4(&shader, "proj", proj);
     array.draw(&array);
     shader.unbind(&shader);
 }

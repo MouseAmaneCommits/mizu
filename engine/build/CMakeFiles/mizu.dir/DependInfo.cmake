@@ -7,6 +7,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Opact/Desktop/mizu engine/vendor/src/glad.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/core/application.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/core/logger.c.obj"
+  "C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/math/mat4.c.obj"
+  "C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/math/vector.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/platform/platform.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj"
