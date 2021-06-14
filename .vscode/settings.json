@@ -6,6 +6,7 @@
         "stdio.h": "c",
         "vertex_array.h": "c",
         "vertex_buffer.h": "c",
-        "ogl_vertex_array.h": "c"
+        "ogl_vertex_array.h": "c",
+        "glad.h": "c"
     }
 }

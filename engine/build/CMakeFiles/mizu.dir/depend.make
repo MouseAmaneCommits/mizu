@@ -45,6 +45,14 @@ CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.c
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.h
 
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../../vendor/include/KHR/khrplatform.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../../vendor/include/glad/glad.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/core/logger.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/opengl/ogl_shader.c
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/opengl/ogl_shader.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/shader.h
+
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/KHR/khrplatform.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/core/logger.h

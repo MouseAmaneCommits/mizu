@@ -331,6 +331,33 @@ src/renderer/context/context.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/context/context.c.s
 .PHONY : src/renderer/context/context.c.s
 
+src/renderer/object/opengl/ogl_shader.obj: src/renderer/object/opengl/ogl_shader.c.obj
+
+.PHONY : src/renderer/object/opengl/ogl_shader.obj
+
+# target to build an object file
+src/renderer/object/opengl/ogl_shader.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj
+.PHONY : src/renderer/object/opengl/ogl_shader.c.obj
+
+src/renderer/object/opengl/ogl_shader.i: src/renderer/object/opengl/ogl_shader.c.i
+
+.PHONY : src/renderer/object/opengl/ogl_shader.i
+
+# target to preprocess a source file
+src/renderer/object/opengl/ogl_shader.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.i
+.PHONY : src/renderer/object/opengl/ogl_shader.c.i
+
+src/renderer/object/opengl/ogl_shader.s: src/renderer/object/opengl/ogl_shader.c.s
+
+.PHONY : src/renderer/object/opengl/ogl_shader.s
+
+# target to generate assembly for a file
+src/renderer/object/opengl/ogl_shader.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.s
+.PHONY : src/renderer/object/opengl/ogl_shader.c.s
+
 src/renderer/object/opengl/ogl_vertex_array.obj: src/renderer/object/opengl/ogl_vertex_array.c.obj
 
 .PHONY : src/renderer/object/opengl/ogl_vertex_array.obj
@@ -442,6 +469,9 @@ help:
 	@echo ... src/renderer/context/context.obj
 	@echo ... src/renderer/context/context.i
 	@echo ... src/renderer/context/context.s
+	@echo ... src/renderer/object/opengl/ogl_shader.obj
+	@echo ... src/renderer/object/opengl/ogl_shader.i
+	@echo ... src/renderer/object/opengl/ogl_shader.s
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.obj
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.i
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.s
