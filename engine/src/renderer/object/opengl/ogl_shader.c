@@ -33,7 +33,6 @@ const char * GetGLErrorStr(GLenum err)
 static void ogl_bind(m_shader* self){
     u32 shader_id = 0;
     memcpy(&shader_id, self->unimplemented_data, sizeof(u32));
-    printf("%i\n", shader_id);
     glUseProgram(shader_id);
 }
 

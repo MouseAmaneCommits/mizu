@@ -20,7 +20,7 @@ static void ogl_set_layout(m_vertex_buffer* self, m_vertex_buffer_layout* layout
     self->layout = layout;
 }
 
-void init_vertex_buffer_opengl(m_vertex_buffer* self, float* vertices, u32 size_of_vertices){
+void m_init_vertex_buffer_opengl(m_vertex_buffer* self, float* vertices, u32 size_of_vertices){
     self->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
 
     u32 id = 0;

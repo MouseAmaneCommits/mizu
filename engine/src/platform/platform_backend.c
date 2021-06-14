@@ -13,7 +13,6 @@ LRESULT window_proc(HWND hWnd,UINT Msg,WPARAM wParam,LPARAM lParam){
             PostQuitMessage(0);
             return;
         case WM_SIZE:
-            M_INFO("new width:%i new height:%i", LOWORD(lParam), HIWORD(lParam));
             if(m_initialized_renderer())
                 m_reshape_renderer(LOWORD(lParam), HIWORD(lParam));
     }
