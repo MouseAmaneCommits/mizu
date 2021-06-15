@@ -110,24 +110,24 @@ void m_translate_matrix(mat4* left, vec3 value){
 
 void m_rotate_matrix(mat4* left, vec3 value){
     float m_x[4][4] = {
-        1, 0, 0, 0,
-        0, cos(value.x), -sin(value.x), 0,
-        0, sin(value.x), cos(value.x), 0,
-        0, 0, 0, 1
+        {1, 0, 0, 0},
+        {0, cos(value.x), -sin(value.x), 0},
+        {0, sin(value.x), cos(value.x), 0},
+        {0, 0, 0, 1}
     };
     mat4 rot_x = m_fill_matrix(m_x);
     float m_y[4][4] = {
-        cos(value.y), 0, sin(value.y), 0,
-        0, 1, 0, 0,
-        -sin(value.y), 0, cos(value.y), 0,
-        0, 0, 0, 1
+        {cos(value.y), 0, sin(value.y), 0},
+        {0, 1, 0, 0},
+        {-sin(value.y), 0, cos(value.y), 0},
+        {0, 0, 0, 1}
     };
     mat4 rot_y = m_fill_matrix(m_y);
     float m_z[4][4] = {
-        cos(value.z), -sin(value.z), 0, 0,
-        sin(value.z), cos(value.z), 0, 0,
-        0, 0, 1, 0,
-        0, 0, 0, 1
+        {cos(value.z), -sin(value.z), 0, 0},
+        {sin(value.z), cos(value.z), 0, 0},
+        {0, 0, 1, 0},
+        {0, 0, 0, 1}
     };
     mat4 rot_z = m_fill_matrix(m_z);
 
@@ -148,4 +148,20 @@ float* m_convert_matrix_to_float_array(mat4 mat){
     }
 
     return array;
+}
+
+mat4 m_orthographic(float left, float right, float bottom, float top, float near, float far){
+    float matrix[4][4] = {
+        {2/(right-left), 0, 0, -((right+left)/(right-left))},
+        {0, 2/(top-bottom), 0, -((top+bottom)/(top-bottom))},
+        {0, 0, (-2)/(far-near), -((far+near)/far-near)},
+        {0, 0, 0, 1}
+    };
+    mat4 result = m_fill_matrix(matrix);
+
+    return result;
+}
+
+mat4 m_perspective(float left, float right, float bottom, float top, float near, float far){
+
 }

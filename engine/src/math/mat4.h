@@ -21,3 +21,6 @@ MAPI void m_rotate_matrix(mat4* left, vec3 value);
 MAPI mat4 m_mul_matrix(mat4 left, mat4 right);
 
 MAPI float* m_convert_matrix_to_float_array(mat4 mat);
+
+MAPI mat4 m_orthographic(float left, float right, float bottom, float top, float near, float far);
+MAPI mat4 m_perspective(float left, float right, float bottom, float top, float near, float far);

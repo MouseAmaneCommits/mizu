@@ -44,8 +44,9 @@ static void ogl_draw(m_vertex_array* self){
     ogl_bind(self);
     glEnableVertexAttribArray(self->vbos[0]->layout->index);
     
-    if(!self->ibo_bound)
+    if(!self->ibo_bound){
         glDrawArrays(GL_TRIANGLES, 0, self->vbos[0]->length/3);
+    }
     else{
         self->ibo->bind(self->ibo);
         glDrawElements(GL_TRIANGLES, self->ibo->count, GL_UNSIGNED_INT, NULL);

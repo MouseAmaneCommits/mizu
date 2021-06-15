@@ -11,16 +11,55 @@
 #include <sys/time.h>
 #include <glad/glad.h>
 
-static float vertices[] = {
-     0.5f,  0.5f, 0.0f,  // top right
-     0.5f, -0.5f, 0.0f,  // bottom right
-    -0.5f, -0.5f, 0.0f,  // bottom left
-    -0.5f,  0.5f, 0.0f   // top left 
-};
+// static float vertices[] = {
+//      0.5f,  0.5f, 0.0f,  // top right
+//      0.5f, -0.5f, 0.0f,  // bottom right
+//     -0.5f, -0.5f, 0.0f,  // bottom left
+//     -0.5f,  0.5f, 0.0f   // top left 
+// };
 
-static u32 indices[] = {
-    0, 1, 3,   // first triangle
-    1, 2, 3    // second triangle
+// static u32 indices[] = {
+//     0, 1, 3,   // first triangle
+//     1, 2, 3    // second triangle
+// };
+
+static float vertices[] = {
+     -1.0f,-1.0f,-1.0f, // triangle 1 : begin
+    -1.0f,-1.0f, 1.0f,
+    -1.0f, 1.0f, 1.0f, // triangle 1 : end
+    1.0f, 1.0f,-1.0f, // triangle 2 : begin
+    -1.0f,-1.0f,-1.0f,
+    -1.0f, 1.0f,-1.0f, // triangle 2 : end
+    1.0f,-1.0f, 1.0f,
+    -1.0f,-1.0f,-1.0f,
+    1.0f,-1.0f,-1.0f,
+    1.0f, 1.0f,-1.0f,
+    1.0f,-1.0f,-1.0f,
+    -1.0f,-1.0f,-1.0f,
+    -1.0f,-1.0f,-1.0f,
+    -1.0f, 1.0f, 1.0f,
+    -1.0f, 1.0f,-1.0f,
+    1.0f,-1.0f, 1.0f,
+    -1.0f,-1.0f, 1.0f,
+    -1.0f,-1.0f,-1.0f,
+    -1.0f, 1.0f, 1.0f,
+    -1.0f,-1.0f, 1.0f,
+    1.0f,-1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f,-1.0f,-1.0f,
+    1.0f, 1.0f,-1.0f,
+    1.0f,-1.0f,-1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f,-1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f,-1.0f,
+    -1.0f, 1.0f,-1.0f,
+    1.0f, 1.0f, 1.0f,
+    -1.0f, 1.0f,-1.0f,
+    -1.0f, 1.0f, 1.0f,
+    1.0f, 1.0f, 1.0f,
+    -1.0f, 1.0f, 1.0f,
+    1.0f,-1.0f, 1.0f
 };
 
 static m_shader shader;
@@ -30,11 +69,14 @@ static m_vertex_array array;
 static m_vertex_buffer_layout layout;
 static mat4 view;
 static mat4 proj;
+static mat4 model;
 
 void fl_start(){
     view = m_identity_matrix();
     // print_list(m_convert_matrix_to_float_array(view));
-    proj = m_identity_matrix();
+    proj = m_orthographic(-1, 1, -1, 1, 0.01f, 1000.0f);
+
+    model = m_identity_matrix();
 
     layout.index = 0;
     layout.size = 3;
@@ -45,20 +87,50 @@ void fl_start(){
 
     array.add_vbo(&array, &vbo);
     
-    m_init_index_buffer_opengl(&ibo, indices, sizeof(indices));
+    // m_init_index_buffer_opengl(&ibo, indices, sizeof(indices));
+    // array.bind_ibo(&array, &ibo);
     
-    array.bind_ibo(&array, &ibo);
 
     m_init_shader_opengl(&shader, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
+
+    m_translate_matrix(&view, m_init_vec3(0, 0, -1));
 }
 
 void fl_update(){
+    //m_translate_matrix(&model, m_init_vec3(0.1f, 0, 0));
 
-    m_rotate_matrix(&view, m_init_vec3(0, 0, 0.1f));
+    if(GetAsyncKeyState('D')){
+        m_translate_matrix(&view, m_init_vec3(-0.1f, 0, 0));
+    }
+    if(GetAsyncKeyState('A')){
+        m_translate_matrix(&view, m_init_vec3(0.1f, 0, 0));
+    }
+    if(GetAsyncKeyState('S')){
+        m_translate_matrix(&view, m_init_vec3(0, 0, -0.1f));
+    }
+    if(GetAsyncKeyState('W')){
+        m_translate_matrix(&view, m_init_vec3(0, 0, 0.1f));
+    }
+
+    if(GetAsyncKeyState('E')){
+        m_rotate_matrix(&model, m_init_vec3(0, 0, 0.1f));
+    }
+    if(GetAsyncKeyState('Q')){
+        m_rotate_matrix(&model, m_init_vec3(0, 0, -0.1f));
+    }
+
+    if(GetAsyncKeyState('C')){
+        m_rotate_matrix(&view, m_init_vec3(0, -0.1f, 0));
+    }
+    if(GetAsyncKeyState('Z')){
+        m_rotate_matrix(&view, m_init_vec3(0, 0.1f, 0));
+    }
+
 
     shader.bind(&shader);
     shader.set_mat4(&shader, "view", view);
     shader.set_mat4(&shader, "proj", proj);
+    shader.set_mat4(&shader, "model", model);
     array.draw(&array);
     shader.unbind(&shader);
 }
