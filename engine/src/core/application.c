@@ -32,11 +32,10 @@ void m_run_application(m_application* self, u32 x, u32 y, u32 width, u32 height,
         self->layers[i]->attach();
     }
 
-    //TODO: Hecka slow frametimes for the main loop. Although, in the renderer its 0 millseconds elapsed, and same for layer rendering. So maybe its the platform code 
     while(!m_closing_platform(&self->platform)){
-        struct timeval start, stop; 
-        double milli = 0;
-        gettimeofday(&start, NULL);
+        // struct timeval start, stop; 
+        // double milli = 0;
+        // gettimeofday(&start, NULL);
         
         m_update_platform(&self->platform);
 
@@ -49,12 +48,14 @@ void m_run_application(m_application* self, u32 x, u32 y, u32 width, u32 height,
 
         m_end_frame();
 
-        gettimeofday(&stop, NULL);
-        milli = (double)((stop.tv_usec - start.tv_usec) / 1000);
-        printf("layer(elapsed): %f\n",milli);
+        // gettimeofday(&stop, NULL);
+        // milli = (double)((stop.tv_usec - start.tv_usec) / 1000) + ((stop.tv_sec - start.tv_sec) * 1000);
+        // printf("game loop iteration(elapsed ms): %f\n",milli);
     }
 
     for(u32 i = 0; i < self->layer_index; i++){
         self->layers[i]->detach();
     }
+
+    m_destroy_platform(&self->platform);
 }

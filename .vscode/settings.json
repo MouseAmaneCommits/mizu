@@ -9,7 +9,8 @@
         "ogl_vertex_array.h": "c",
         "glad.h": "c",
         "mat4.h": "c",
-        "mizu_thread.h": "c"
+        "mizu_thread.h": "c",
+        "mmemory.h": "c"
     },
     "editor.cursorStyle": "line",
     "editor.cursorWidth": 8,

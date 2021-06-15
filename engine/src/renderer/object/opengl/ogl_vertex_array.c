@@ -2,6 +2,7 @@
 
 #define UNIMPLEMENTED_DATA_SIZE 6553
 
+#include "../../../memory/mmemory.h"
 #include <time.h>
 #include <glad/glad.h>
 #include <malloc.h>
@@ -68,6 +69,8 @@ void m_init_vertex_array_opengl(m_vertex_array* array){
     array->ibo_bound = FALSE;
     
     array->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
+    memset(array->unimplemented_data, 0, UNIMPLEMENTED_DATA_SIZE);
+
     u32 id = 0;
     glGenVertexArrays(1, &id);
     memcpy(array->unimplemented_data, &id, sizeof(u32));
@@ -77,4 +80,13 @@ void m_init_vertex_array_opengl(m_vertex_array* array){
     array->add_vbo = ogl_add_vbo;
     array->draw = ogl_draw;
     array->bind_ibo = ogl_bind_ibo;
+}
+
+void m_destroy_vertex_array_opengl(m_vertex_array* self){
+    u32 id;
+    memcpy(&id, self->unimplemented_data, sizeof(u32));
+
+    glDeleteVertexArrays(1, &id);
+    
+    free(self->unimplemented_data);
 }

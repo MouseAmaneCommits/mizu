@@ -3,6 +3,8 @@
 #include <memory.h>
 #include <malloc.h>
 
+#include "../memory/mmemory.h"
+
 #include "platform_backend.h"
 
 void m_init_platform(m_platform* self, u32 x, u32 y, u32 width, u32 height, const char* title){
@@ -13,6 +15,7 @@ void m_init_platform(m_platform* self, u32 x, u32 y, u32 width, u32 height, cons
     self->title = title;
     
     self->unimplemented_data = malloc(sizeof(u8) * UNIMPLEMENTED_DATA_SIZE);
+    memset(self->unimplemented_data, 0, sizeof(u8) * UNIMPLEMENTED_DATA_SIZE);
 
     #ifdef MIZU_PLATFORM_WINDOWS
     m_init_platform_for_win32(self);
@@ -43,4 +46,6 @@ void m_destroy_platform(m_platform* self){
     #elif MIZU_PLATFORM_LINUX
     m_destroy_for_linux(self);  
     #endif
+
+    free(self->unimplemented_data);
 }

@@ -1,6 +1,8 @@
 #include "ogl_shader.h"
 
+#include "../../../memory/mmemory.h"
 #include <memory.h>
+#include <malloc.h>
 #include "../../../core/logger.h"
 
 #define UNIMPLEMENTED_DATA_SIZE 6553
@@ -68,6 +70,9 @@ static void ogl_create_shader(m_shader* self, const char* vs, const char* fs){
     glAttachShader(program, fragment_shader);
 
     glLinkProgram(program);
+
+    // glDeleteShader(vertex_shader);
+    // glDeleteShader(fragment_shader);
 
     memcpy(self->unimplemented_data, &program, sizeof(u32));
     // GLint linked;
@@ -167,11 +172,14 @@ static void ogl_set_mat4(m_shader* self, const char* name, mat4 value){
         return;
     }
 
-    glUniformMatrix4fv(location, 1, GL_FALSE, m_convert_matrix_to_float_array(value));
+    float* values = m_convert_matrix_to_float_array(value);
+
+    glUniformMatrix4fv(location, 1, GL_FALSE, values);
 }
 
 void m_init_shader_opengl(m_shader* self, const char* vFilename, const char* fFilename){
     self->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
+    memset(self->unimplemented_data, 0, UNIMPLEMENTED_DATA_SIZE);
     ogl_create_shader(self, read_file(vFilename), read_file(fFilename));
     
     self->bind = ogl_bind;
@@ -181,4 +189,12 @@ void m_init_shader_opengl(m_shader* self, const char* vFilename, const char* fFi
     self->set_vec3 = ogl_set_vec3;
     self->set_vec4 = ogl_set_vec4;
     self->set_mat4 = ogl_set_mat4;
+}
+
+void m_destroy_shader_opengl(m_shader* self){
+    u32 id;
+    memcpy(&id, self->unimplemented_data, sizeof(u32));
+    glDeleteProgram(id);
+
+    free(self->unimplemented_data);
 }

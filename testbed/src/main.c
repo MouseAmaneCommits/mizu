@@ -97,7 +97,7 @@ void fl_start(){
 }
 
 void fl_update(){
-    //m_translate_matrix(&model, m_init_vec3(0.1f, 0, 0));
+    // m_translate_matrix(&model, m_init_vec3(0.1f, 0, 0));
 
     if(GetAsyncKeyState('D')){
         m_translate_matrix(&view, m_init_vec3(-0.1f, 0, 0));

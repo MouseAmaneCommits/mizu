@@ -104,8 +104,6 @@ void m_translate_matrix(mat4* left, vec3 value){
     left->matrix[3][0] += value.x;
     left->matrix[3][1] += value.y;
     left->matrix[3][2] += value.z;
-
-    return left;
 }
 
 void m_rotate_matrix(mat4* left, vec3 value){

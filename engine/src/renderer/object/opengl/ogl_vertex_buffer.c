@@ -3,6 +3,7 @@
 #include <memory.h>
 #include <malloc.h>
 #include <glad/glad.h>
+#include "../../../memory/mmemory.h"
 
 #define UNIMPLEMENTED_DATA_SIZE 6553
 
@@ -35,4 +36,12 @@ void m_init_vertex_buffer_opengl(m_vertex_buffer* self, float* vertices, u32 siz
     self->bind = ogl_bind;
     self->unbind = ogl_unbind;
     self->set_layout = ogl_set_layout;
+}
+
+void m_destroy_vertex_buffer_opengl(m_vertex_buffer* self){
+    u32 id;
+    memcpy(self->unimplemented_data, &id, sizeof(u32));
+    glDeleteBuffers(1, &id);
+    
+    free(self->unimplemented_data);
 }

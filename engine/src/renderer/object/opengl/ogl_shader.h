@@ -4,3 +4,4 @@
 #include "../../../defines.h"
 
 MAPI void m_init_shader_opengl(m_shader* shader, const char* vFilename, const char* fFilename);
+MAPI void m_destroy_shader_opengl(m_shader* shader);

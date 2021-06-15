@@ -27,6 +27,7 @@ CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/math/vector.c
 CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/math/vector.h
 
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/memory/mmemory.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform.c
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform_backend.h
@@ -57,6 +58,7 @@ CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../../vendor/include/KHR/khrplatform.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/memory/mmemory.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/renderer/object/index_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/renderer/object/opengl/ogl_index_buffer.c
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/renderer/object/opengl/ogl_index_buffer.h
@@ -68,6 +70,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/defines.
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/math/mat4.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/math/math.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/math/vector.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/memory/mmemory.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/opengl/ogl_shader.c
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/opengl/ogl_shader.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/shader.h
@@ -76,6 +79,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../ven
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/core/logger.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/memory/mmemory.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/index_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.c
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.h
@@ -85,11 +89,13 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/re
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../../vendor/include/KHR/khrplatform.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/memory/mmemory.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.c
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/vertex_buffer.h
 
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/memory/mmemory.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/platform/platform.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/context/api/opengl_context.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/context/context.h

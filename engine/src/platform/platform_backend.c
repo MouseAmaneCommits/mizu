@@ -33,7 +33,7 @@ void m_init_platform_for_win32(m_platform* self){
     WNDCLASS wc = {0};
     wc.cbClsExtra = NULL;
     wc.cbWndExtra = NULL;
-    wc.hbrBackground = (HBRUSH)(NULL);
+    wc.hbrBackground = NULL;
     wc.hCursor = NULL;
     wc.hIcon = NULL;
     wc.hInstance = instance;
@@ -58,9 +58,6 @@ void m_init_platform_for_linux(m_platform* self){
 
 void m_update_for_win32(m_platform* self){
     #ifdef MIZU_PLATFORM_WINDOWS
-    HWND hwnd = NULL;
-    memcpy(&hwnd, self->unimplemented_data, sizeof(HWND));
-    
     MSG msg;
     
     while(PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)){

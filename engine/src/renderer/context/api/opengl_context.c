@@ -11,9 +11,15 @@
 
 static m_context* self;
 
+
+/*- Global Variables*/
+#ifdef MIZU_PLATFORM_WINDOWS // Windows global variables
+static HWND hwnd;
+static HDC ourWindowHandleToDeviceContext;
+#endif
+
 void ogl_init(){
     #ifdef MIZU_PLATFORM_WINDOWS
-    HWND hwnd = NULL;
     memcpy(&hwnd, self->platform->unimplemented_data, sizeof(HWND));
 
     		PIXELFORMATDESCRIPTOR pfd =
@@ -36,7 +42,7 @@ void ogl_init(){
 			0, 0, 0
 		};
 
-		HDC ourWindowHandleToDeviceContext = GetDC(hwnd);
+		ourWindowHandleToDeviceContext = GetDC(hwnd);
 
 		int  letWindowsChooseThisPixelFormat;
 		letWindowsChooseThisPixelFormat = ChoosePixelFormat(ourWindowHandleToDeviceContext, &pfd); 
@@ -59,9 +65,7 @@ void ogl_begin(){
 
 void ogl_end(){
     #ifdef MIZU_PLATFORM_WINDOWS
-    HWND hwnd = NULL;
-    memcpy(&hwnd, self->platform->unimplemented_data, sizeof(HWND));
-    SwapBuffers(GetDC(hwnd));
+    SwapBuffers(ourWindowHandleToDeviceContext);
     #endif
 }
 

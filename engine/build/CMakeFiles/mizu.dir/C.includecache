@@ -24,95 +24,29 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.c
-mat4.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
-malloc.h
--
-memory.h
--
-math.h
--
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
-../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-vector.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
-mat4.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
-vector.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/index_buffer.h
-../../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.c
-ogl_shader.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.c
+opengl_context.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.h
 memory.h
 -
 ../../../core/logger.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
-stddef.h
+Windows.h
 -
 glad/glad.h
 -
-stdlib.h
--
-stdio.h
--
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h
-../shader.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
-../../../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.h
+../context.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.c
-ogl_vertex_array.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
-time.h
--
-glad/glad.h
--
-malloc.h
--
-memory.h
--
-sys/time.h
--
-../../../core/logger.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
-../vertex_array.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
-../../../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
 ../../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-../../math/math.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
-../../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-vertex_buffer.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
-index_buffer.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/index_buffer.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
-../../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+../../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 
