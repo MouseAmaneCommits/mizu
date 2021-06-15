@@ -60,24 +60,18 @@ void m_update_for_win32(m_platform* self){
     #ifdef MIZU_PLATFORM_WINDOWS
     HWND hwnd = NULL;
     memcpy(&hwnd, self->unimplemented_data, sizeof(HWND));
-
+    
     MSG msg;
-    if(PeekMessage(&msg, hwnd, NULL, NULL, PM_REMOVE)){
+    
+    while(PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)){
         TranslateMessage(&msg);
         DispatchMessage(&msg);
-        
-        printf("%i", msg.message);
-        switch(msg.message){
-            case WM_CLOSE: {
-                printf("closing\n");
-                self->closing = TRUE;
-                PostQuitMessage(0);
-                exit(0);
-            }
-        }
-
     }
-    #endif
+    if (msg.message == WM_QUIT){
+        self->closing = TRUE;
+    }
+
+#endif
 }
 
 void m_destroy_for_win32(m_platform* self){
