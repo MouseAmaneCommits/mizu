@@ -6,47 +6,75 @@
 
 #IncludeRegexTransform: 
 
+../../vendor/include/KHR/khrplatform.h
+stdint.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+../../vendor/include/glad/glad.h
+KHR/khrplatform.h
+-
+
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.c
+mat4.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+malloc.h
+-
+memory.h
+-
+math.h
+-
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+vector.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
+mat4.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+vector.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.c
-platform_backend.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.h
-../renderer/renderer.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
-../core/logger.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.c
+ogl_shader.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h
+memory.h
+-
+../../../core/logger.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
-stdio.h
+stddef.h
+-
+glad/glad.h
 -
 stdlib.h
 -
-windows.h
+stdio.h
 -
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.h
-../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h
+../shader.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
+../../../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-platform.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
 ../../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-../../platform/platform.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
-context/context.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
-../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-../platform/platform.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+../../math/math.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
 

@@ -54,8 +54,8 @@ void fl_start(){
 
 void fl_update(){
 
-    m_translate_matrix(&view, m_init_vec3(0.01f, 0.0f, 0.0f));
-    
+    m_rotate_matrix(&view, m_init_vec3(0, 0, 0.1f));
+
     shader.bind(&shader);
     shader.set_mat4(&shader, "view", view);
     shader.set_mat4(&shader, "proj", proj);
