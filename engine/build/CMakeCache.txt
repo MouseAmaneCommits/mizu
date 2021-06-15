@@ -227,6 +227,9 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=C:/MinGW/bin/strip.exe
 
+//using WIN32 threads
+CMAKE_USE_WIN32_THREADS_INIT:BOOL=ON
+
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual

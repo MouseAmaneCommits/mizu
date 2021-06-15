@@ -4,6 +4,9 @@
 
 #include "../core/logger.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+
 #ifdef MIZU_PLATFORM_WINDOWS
 #include <windows.h>
 
@@ -55,13 +58,24 @@ void m_init_platform_for_linux(m_platform* self){
 
 void m_update_for_win32(m_platform* self){
     #ifdef MIZU_PLATFORM_WINDOWS
+    HWND hwnd = NULL;
+    memcpy(&hwnd, self->unimplemented_data, sizeof(HWND));
+
     MSG msg;
-    if(GetMessage(&msg, NULL, NULL, NULL)){
+    if(PeekMessage(&msg, hwnd, NULL, NULL, PM_REMOVE)){
         TranslateMessage(&msg);
         DispatchMessage(&msg);
-        self->closing = FALSE;
-    }else{
-        self->closing = TRUE;
+        
+        printf("%i", msg.message);
+        switch(msg.message){
+            case WM_CLOSE: {
+                printf("closing\n");
+                self->closing = TRUE;
+                PostQuitMessage(0);
+                exit(0);
+            }
+        }
+
     }
     #endif
 }

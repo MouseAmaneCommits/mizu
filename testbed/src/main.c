@@ -8,6 +8,7 @@
 
 
 #include <windows.h>
+#include <sys/time.h>
 #include <glad/glad.h>
 
 static float vertices[] = {
@@ -52,10 +53,10 @@ void fl_start(){
 }
 
 void fl_update(){
+
+    m_translate_matrix(&view, m_init_vec3(0.01f, 0.0f, 0.0f));
+    
     shader.bind(&shader);
-    
-        m_translate_matrix(&view, m_init_vec3(0.01f, 0.0f, 0.0f));
-    
     shader.set_mat4(&shader, "view", view);
     shader.set_mat4(&shader, "proj", proj);
     array.draw(&array);

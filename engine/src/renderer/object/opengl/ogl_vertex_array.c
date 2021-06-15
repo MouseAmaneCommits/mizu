@@ -38,9 +38,7 @@ static void ogl_add_vbo(m_vertex_array* self, m_vertex_buffer* buffer){
 }
 
 static void ogl_draw(m_vertex_array* self){
-    struct timeval start, stop;
-    double secs = 0;
-    gettimeofday(&start, NULL);
+
 
 
     ogl_bind(self);
@@ -57,9 +55,7 @@ static void ogl_draw(m_vertex_array* self){
     glDisableVertexAttribArray(self->vbos[0]->layout->index);
     ogl_unbind(self);
 
-    gettimeofday(&stop, NULL);
-    secs = (double)(stop.tv_usec - start.tv_usec) / 1000000 + (double)(stop.tv_sec - start.tv_sec);
-    printf("renderer(elapsed): %f\n",secs);
+
 }
 
 static void ogl_bind_ibo(m_vertex_array* self, m_index_buffer* ibo){

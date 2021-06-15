@@ -119,6 +119,8 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_index_b
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h
 windows.h
 -
+sys/time.h
+-
 glad/glad.h
 -
 
