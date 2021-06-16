@@ -59,11 +59,14 @@ void ogl_init(){
 }
 
 void ogl_begin(){
+	glEnable(GL_DEPTH_TEST);
 	glClearColor(1, 0, 0, 0);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 void ogl_end(){
+	glDisable(GL_DEPTH_TEST);
+
     #ifdef MIZU_PLATFORM_WINDOWS
     SwapBuffers(ourWindowHandleToDeviceContext);
     #endif
