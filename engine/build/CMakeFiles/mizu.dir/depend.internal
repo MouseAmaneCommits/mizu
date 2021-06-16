@@ -18,6 +18,9 @@ CMakeFiles/mizu.dir/src/core/logger.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 CMakeFiles/mizu.dir/src/math/mat4.c.obj
+ ../../vendor/include/KHR/khrplatform.h
+ ../../vendor/include/glad/glad.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.c
  C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h

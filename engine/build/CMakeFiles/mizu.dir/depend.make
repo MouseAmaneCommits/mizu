@@ -17,6 +17,9 @@ CMakeFiles/mizu.dir/src/core/logger.c.obj: ../src/core/logger.c
 CMakeFiles/mizu.dir/src/core/logger.c.obj: ../src/core/logger.h
 CMakeFiles/mizu.dir/src/core/logger.c.obj: ../src/defines.h
 
+CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../../vendor/include/KHR/khrplatform.h
+CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../../vendor/include/glad/glad.h
+CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/core/logger.h
 CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/math/mat4.c
 CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/math/mat4.h

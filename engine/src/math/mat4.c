@@ -3,6 +3,11 @@
 #include <malloc.h>
 #include <memory.h>
 #include <math.h>
+#include "../core/logger.h"
+
+float to_radians(float value){
+     return value * (M_PI / 180);
+}
 
 mat4 m_fill_matrix(float m[4][4]){
     mat4 result;
@@ -152,7 +157,7 @@ mat4 m_orthographic(float left, float right, float bottom, float top, float near
     float matrix[4][4] = {
         {2/(right-left), 0, 0, -((right+left)/(right-left))},
         {0, 2/(top-bottom), 0, -((top+bottom)/(top-bottom))},
-        {0, 0, (-2)/(far-near), -((far+near)/far-near)},
+        {0, 0, -2/(far-near), -((far+near)/(far-near))},
         {0, 0, 0, 1}
     };
     mat4 result = m_fill_matrix(matrix);
@@ -160,6 +165,20 @@ mat4 m_orthographic(float left, float right, float bottom, float top, float near
     return result;
 }
 
-mat4 m_perspective(float left, float right, float bottom, float top, float near, float far){
+#include <glad/glad.h>
 
+mat4 m_perspective(float left, float right, float bottom, float top, float near, float far){
+    // float radians_fov = to_radians(fov);
+    // M_INFO("Old fov %f, Radians %f", fov, radians_fov);
+    
+    float matrix[4][4] = {
+        {near/right, 0, 0, 0},
+        {0, near/top, 0, 0},
+        {0, 0, ((-far + near)/(far-near)), ((-2 * far * near) / (far-near))},
+        {0, 0, -1, 0}
+    };
+
+    mat4 result = m_fill_matrix(matrix);
+
+    return result;
 }

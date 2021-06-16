@@ -19,6 +19,13 @@
 //     -0.5f,  0.5f, 0.0f   // top left 
 // };
 
+// static float texCoords[] = {
+// 1.0f, 1.0f,
+// 1.0f, 0.0f,
+// 0.0f, 0.0f,
+// 0.0f, 1.0f 
+// };
+// 
 // static u32 indices[] = {
 //     0, 1, 3,   // first triangle
 //     1, 2, 3    // second triangle
@@ -118,8 +125,8 @@ static mat4 model;
 void fl_start(){
     view = m_identity_matrix();
     // print_list(m_convert_matrix_to_float_array(view));
-    proj = m_orthographic(-1, 1, -1, 1, 0.01f, 1000.0f);
-    //proj = m_identity_matrix();
+    //proj = m_orthographic(-1, 1, -1, 1, 0.01f, 1000.0f);
+    proj = m_perspective(-1, 1, -1, 1, 10.0f, 1000.0f);
 
     model = m_identity_matrix();
 
@@ -166,10 +173,10 @@ void fl_update(){
     }
 
     if(GetAsyncKeyState('E')){
-        m_rotate_matrix(&model, m_init_vec3(0, 0, 0.1f));
+        m_translate_matrix(&view, m_init_vec3(0, -0.1f, 0));
     }
     if(GetAsyncKeyState('Q')){
-        m_rotate_matrix(&model, m_init_vec3(0, 0, -0.1f));
+         m_translate_matrix(&view, m_init_vec3(0, 0.1f, 0));
     }
 
     if(GetAsyncKeyState('C')){

@@ -24,29 +24,27 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
-../defines.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.c
-opengl_context.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.c
+mat4.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+malloc.h
+-
 memory.h
 -
-../../../core/logger.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
-Windows.h
+math.h
 -
+../core/logger.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
 glad/glad.h
 -
 
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.h
-../context.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
-
-C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
-../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
-../../platform/platform.h
-C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+vector.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
