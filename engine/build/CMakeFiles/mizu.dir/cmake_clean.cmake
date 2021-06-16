@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/mizu.dir/src/renderer/context/context.c.obj"
   "CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj"
   "CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj"
+  "CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj"
   "CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj"
   "CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj"
   "CMakeFiles/mizu.dir/src/renderer/renderer.c.obj"

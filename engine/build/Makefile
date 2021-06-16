@@ -439,6 +439,33 @@ src/renderer/object/opengl/ogl_shader.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.s
 .PHONY : src/renderer/object/opengl/ogl_shader.c.s
 
+src/renderer/object/opengl/ogl_texture.obj: src/renderer/object/opengl/ogl_texture.c.obj
+
+.PHONY : src/renderer/object/opengl/ogl_texture.obj
+
+# target to build an object file
+src/renderer/object/opengl/ogl_texture.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj
+.PHONY : src/renderer/object/opengl/ogl_texture.c.obj
+
+src/renderer/object/opengl/ogl_texture.i: src/renderer/object/opengl/ogl_texture.c.i
+
+.PHONY : src/renderer/object/opengl/ogl_texture.i
+
+# target to preprocess a source file
+src/renderer/object/opengl/ogl_texture.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.i
+.PHONY : src/renderer/object/opengl/ogl_texture.c.i
+
+src/renderer/object/opengl/ogl_texture.s: src/renderer/object/opengl/ogl_texture.c.s
+
+.PHONY : src/renderer/object/opengl/ogl_texture.s
+
+# target to generate assembly for a file
+src/renderer/object/opengl/ogl_texture.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.s
+.PHONY : src/renderer/object/opengl/ogl_texture.c.s
+
 src/renderer/object/opengl/ogl_vertex_array.obj: src/renderer/object/opengl/ogl_vertex_array.c.obj
 
 .PHONY : src/renderer/object/opengl/ogl_vertex_array.obj
@@ -562,6 +589,9 @@ help:
 	@echo ... src/renderer/object/opengl/ogl_shader.obj
 	@echo ... src/renderer/object/opengl/ogl_shader.i
 	@echo ... src/renderer/object/opengl/ogl_shader.s
+	@echo ... src/renderer/object/opengl/ogl_texture.obj
+	@echo ... src/renderer/object/opengl/ogl_texture.i
+	@echo ... src/renderer/object/opengl/ogl_texture.s
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.obj
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.i
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.s

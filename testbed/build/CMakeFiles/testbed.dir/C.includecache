@@ -72,6 +72,10 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
 ../../../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_texture.h
+../texture.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/texture.h
+
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.h
 ../vertex_array.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
@@ -89,6 +93,10 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 ../../math/math.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/texture.h
+../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
 ../../defines.h
@@ -117,6 +125,8 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_index_buffer.h
 ../../engine/src/renderer/object/opengl/ogl_shader.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h
+../../engine/src/renderer/object/opengl/ogl_texture.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_texture.h
 windows.h
 -
 sys/time.h

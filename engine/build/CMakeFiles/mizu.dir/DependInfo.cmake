@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/context/context.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_index_buffer.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj"
+  "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_texture.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_array.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_vertex_buffer.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/renderer.c.obj"

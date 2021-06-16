@@ -26,3 +26,10 @@ if(expr){\
 }else{\
     m_log(LOG_LEVEL_FATAL, "%s failed! On line %i, in file %s.", #expr, __LINE__, __FILE__);\
 }
+
+#define M_ASSERT_MSG(expr, msg)\
+if(expr){\
+    \
+}else{\
+    m_log(LOG_LEVEL_FATAL, "%s failed! On line %i, in file %s. Message: %s", #expr, __LINE__, __FILE__, msg);\
+}

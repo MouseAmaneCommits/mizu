@@ -125,6 +125,16 @@ static b8 ogl_get_uniform_location(m_shader* self, const char* name, u32* loc){
     return TRUE;
 }
 
+static void ogl_set_int(m_shader* self, const char* name, int value){
+    u32 location = 0;
+    if(!ogl_get_uniform_location(self, name, &location)){
+        M_ERROR("Failed to find uniform location!");
+        return;
+    }
+
+    glUniform1i(location, value);
+}
+
 static void ogl_set_float(m_shader* self, const char* name, float value){
     u32 location = 0;
     if(!ogl_get_uniform_location(self, name, &location)){
@@ -184,6 +194,7 @@ void m_init_shader_opengl(m_shader* self, const char* vFilename, const char* fFi
     
     self->bind = ogl_bind;
     self->unbind = ogl_unbind;
+    self->set_int = ogl_set_int;
     self->set_float = ogl_set_float;
     self->set_vec2 = ogl_set_vec2;
     self->set_vec3 = ogl_set_vec3;

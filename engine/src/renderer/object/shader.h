@@ -12,6 +12,7 @@ typedef struct {
     void(*unbind)(struct m_shader*);
     
     // uniforms
+    void(*set_int)(struct m_shader*, const char*, int);
     void(*set_float)(struct m_shader*, const char*, float);
     void(*set_vec2)(struct m_shader*, const char*, vec2);
     void(*set_vec3)(struct m_shader*, const char*, vec3);

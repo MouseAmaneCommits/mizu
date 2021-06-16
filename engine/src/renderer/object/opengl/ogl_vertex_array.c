@@ -43,7 +43,9 @@ static void ogl_draw(m_vertex_array* self){
 
 
     ogl_bind(self);
-    glEnableVertexAttribArray(self->vbos[0]->layout->index);
+    for(u32 i = 0; i < self->vbo_index; i++){
+        glEnableVertexAttribArray(self->vbos[i]->layout->index);
+    }
     
     if(!self->ibo_bound){
         glDrawArrays(GL_TRIANGLES, 0, self->vbos[0]->length/3);
@@ -54,7 +56,10 @@ static void ogl_draw(m_vertex_array* self){
         self->ibo->unbind(self->ibo);
     }
 
-    glDisableVertexAttribArray(self->vbos[0]->layout->index);
+    for(u32 i = 0; i < self->vbo_index; i++){
+        glDisableVertexAttribArray(self->vbos[i]->layout->index);
+    }
+
     ogl_unbind(self);
 
 

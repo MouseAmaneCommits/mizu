@@ -75,6 +75,15 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/opengl/ogl_shader.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/shader.h
 
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../../vendor/include/KHR/khrplatform.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../../vendor/include/glad/glad.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../../vendor/include/stb_image.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/core/logger.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/renderer/object/opengl/ogl_texture.c
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/renderer/object/opengl/ogl_texture.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/renderer/object/texture.h
+
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/KHR/khrplatform.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/core/logger.h
