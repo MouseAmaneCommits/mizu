@@ -19,3 +19,5 @@ typedef struct {
     void(*set_vec4)(struct m_shader*, const char*, vec4);
     void(*set_mat4)(struct m_shader*, const char*, mat4);
 }m_shader;
+
+MAPI void m_init_shader(m_shader* shader, const char* vertex_shader_name, const char* fragment_shader_name);

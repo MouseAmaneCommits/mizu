@@ -11,3 +11,5 @@ MAPI void m_end_frame();
 
 MAPI void m_reshape_renderer(u32 width, u32 height);
 MAPI b8 m_initialized_renderer();
+
+MAPI m_renderer_api m_renderer_get_api();

@@ -10,7 +10,8 @@
         "glad.h": "c",
         "mat4.h": "c",
         "mizu_thread.h": "c",
-        "mmemory.h": "c"
+        "mmemory.h": "c",
+        "ogl_shader.h": "c"
     },
     "editor.cursorStyle": "line",
     "editor.cursorWidth": 8,

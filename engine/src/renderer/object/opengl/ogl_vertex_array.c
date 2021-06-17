@@ -9,6 +9,7 @@
 #include <memory.h>
 #include <sys/time.h>
 
+#include "ogl_vertex_buffer.h"
 #include "../../../core/logger.h"
 
 static void ogl_bind(m_vertex_array* self){
@@ -88,6 +89,12 @@ void m_init_vertex_array_opengl(m_vertex_array* array){
 }
 
 void m_destroy_vertex_array_opengl(m_vertex_array* self){
+    for(u32 i = 0; i < self->vbo_index; i++){
+        m_destroy_vertex_buffer_opengl(self->vbos[i]);
+        free(self->vbos[i]);
+    }
+
+
     u32 id;
     memcpy(&id, self->unimplemented_data, sizeof(u32));
 

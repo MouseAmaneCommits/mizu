@@ -23,3 +23,5 @@ typedef struct {
     void(*draw)(struct m_vertex_array*);
     void(*bind_ibo)(struct m_vertex_array*, m_index_buffer*);
 }m_vertex_array;
+
+MAPI void m_init_vertex_array(m_vertex_array* vao);

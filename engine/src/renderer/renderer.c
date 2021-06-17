@@ -34,3 +34,7 @@ void m_reshape_renderer(u32 width, u32 height){
 b8 m_initialized_renderer(){
     return initialized;
 }
+
+m_renderer_api m_renderer_get_api(){
+    return context->api;
+}

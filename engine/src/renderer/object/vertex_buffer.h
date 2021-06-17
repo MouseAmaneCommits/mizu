@@ -18,3 +18,5 @@ typedef struct {
     void(*unbind)(struct m_vertex_buffer*);
     void(*set_layout)(struct m_vertex_buffer*, m_vertex_buffer_layout*);
 }m_vertex_buffer;
+
+MAPI void m_init_vertex_buffer(m_vertex_buffer* vbo, float* vertices, u32 size);

@@ -277,6 +277,33 @@ src/math/vector.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/math/vector.c.s
 .PHONY : src/math/vector.c.s
 
+src/memory/mmemory.obj: src/memory/mmemory.c.obj
+
+.PHONY : src/memory/mmemory.obj
+
+# target to build an object file
+src/memory/mmemory.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/memory/mmemory.c.obj
+.PHONY : src/memory/mmemory.c.obj
+
+src/memory/mmemory.i: src/memory/mmemory.c.i
+
+.PHONY : src/memory/mmemory.i
+
+# target to preprocess a source file
+src/memory/mmemory.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/memory/mmemory.c.i
+.PHONY : src/memory/mmemory.c.i
+
+src/memory/mmemory.s: src/memory/mmemory.c.s
+
+.PHONY : src/memory/mmemory.s
+
+# target to generate assembly for a file
+src/memory/mmemory.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/memory/mmemory.c.s
+.PHONY : src/memory/mmemory.c.s
+
 src/platform/platform.obj: src/platform/platform.c.obj
 
 .PHONY : src/platform/platform.obj
@@ -384,6 +411,60 @@ src/renderer/context/context.s: src/renderer/context/context.c.s
 src/renderer/context/context.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/context/context.c.s
 .PHONY : src/renderer/context/context.c.s
+
+src/renderer/mesh/mesh.obj: src/renderer/mesh/mesh.c.obj
+
+.PHONY : src/renderer/mesh/mesh.obj
+
+# target to build an object file
+src/renderer/mesh/mesh.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj
+.PHONY : src/renderer/mesh/mesh.c.obj
+
+src/renderer/mesh/mesh.i: src/renderer/mesh/mesh.c.i
+
+.PHONY : src/renderer/mesh/mesh.i
+
+# target to preprocess a source file
+src/renderer/mesh/mesh.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.i
+.PHONY : src/renderer/mesh/mesh.c.i
+
+src/renderer/mesh/mesh.s: src/renderer/mesh/mesh.c.s
+
+.PHONY : src/renderer/mesh/mesh.s
+
+# target to generate assembly for a file
+src/renderer/mesh/mesh.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.s
+.PHONY : src/renderer/mesh/mesh.c.s
+
+src/renderer/object/index_buffer.obj: src/renderer/object/index_buffer.c.obj
+
+.PHONY : src/renderer/object/index_buffer.obj
+
+# target to build an object file
+src/renderer/object/index_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.obj
+.PHONY : src/renderer/object/index_buffer.c.obj
+
+src/renderer/object/index_buffer.i: src/renderer/object/index_buffer.c.i
+
+.PHONY : src/renderer/object/index_buffer.i
+
+# target to preprocess a source file
+src/renderer/object/index_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.i
+.PHONY : src/renderer/object/index_buffer.c.i
+
+src/renderer/object/index_buffer.s: src/renderer/object/index_buffer.c.s
+
+.PHONY : src/renderer/object/index_buffer.s
+
+# target to generate assembly for a file
+src/renderer/object/index_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.s
+.PHONY : src/renderer/object/index_buffer.c.s
 
 src/renderer/object/opengl/ogl_index_buffer.obj: src/renderer/object/opengl/ogl_index_buffer.c.obj
 
@@ -520,6 +601,114 @@ src/renderer/object/opengl/ogl_vertex_buffer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.s
 .PHONY : src/renderer/object/opengl/ogl_vertex_buffer.c.s
 
+src/renderer/object/shader.obj: src/renderer/object/shader.c.obj
+
+.PHONY : src/renderer/object/shader.obj
+
+# target to build an object file
+src/renderer/object/shader.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj
+.PHONY : src/renderer/object/shader.c.obj
+
+src/renderer/object/shader.i: src/renderer/object/shader.c.i
+
+.PHONY : src/renderer/object/shader.i
+
+# target to preprocess a source file
+src/renderer/object/shader.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/shader.c.i
+.PHONY : src/renderer/object/shader.c.i
+
+src/renderer/object/shader.s: src/renderer/object/shader.c.s
+
+.PHONY : src/renderer/object/shader.s
+
+# target to generate assembly for a file
+src/renderer/object/shader.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/shader.c.s
+.PHONY : src/renderer/object/shader.c.s
+
+src/renderer/object/texture.obj: src/renderer/object/texture.c.obj
+
+.PHONY : src/renderer/object/texture.obj
+
+# target to build an object file
+src/renderer/object/texture.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj
+.PHONY : src/renderer/object/texture.c.obj
+
+src/renderer/object/texture.i: src/renderer/object/texture.c.i
+
+.PHONY : src/renderer/object/texture.i
+
+# target to preprocess a source file
+src/renderer/object/texture.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/texture.c.i
+.PHONY : src/renderer/object/texture.c.i
+
+src/renderer/object/texture.s: src/renderer/object/texture.c.s
+
+.PHONY : src/renderer/object/texture.s
+
+# target to generate assembly for a file
+src/renderer/object/texture.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/texture.c.s
+.PHONY : src/renderer/object/texture.c.s
+
+src/renderer/object/vertex_array.obj: src/renderer/object/vertex_array.c.obj
+
+.PHONY : src/renderer/object/vertex_array.obj
+
+# target to build an object file
+src/renderer/object/vertex_array.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj
+.PHONY : src/renderer/object/vertex_array.c.obj
+
+src/renderer/object/vertex_array.i: src/renderer/object/vertex_array.c.i
+
+.PHONY : src/renderer/object/vertex_array.i
+
+# target to preprocess a source file
+src/renderer/object/vertex_array.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.i
+.PHONY : src/renderer/object/vertex_array.c.i
+
+src/renderer/object/vertex_array.s: src/renderer/object/vertex_array.c.s
+
+.PHONY : src/renderer/object/vertex_array.s
+
+# target to generate assembly for a file
+src/renderer/object/vertex_array.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.s
+.PHONY : src/renderer/object/vertex_array.c.s
+
+src/renderer/object/vertex_buffer.obj: src/renderer/object/vertex_buffer.c.obj
+
+.PHONY : src/renderer/object/vertex_buffer.obj
+
+# target to build an object file
+src/renderer/object/vertex_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj
+.PHONY : src/renderer/object/vertex_buffer.c.obj
+
+src/renderer/object/vertex_buffer.i: src/renderer/object/vertex_buffer.c.i
+
+.PHONY : src/renderer/object/vertex_buffer.i
+
+# target to preprocess a source file
+src/renderer/object/vertex_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.i
+.PHONY : src/renderer/object/vertex_buffer.c.i
+
+src/renderer/object/vertex_buffer.s: src/renderer/object/vertex_buffer.c.s
+
+.PHONY : src/renderer/object/vertex_buffer.s
+
+# target to generate assembly for a file
+src/renderer/object/vertex_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.s
+.PHONY : src/renderer/object/vertex_buffer.c.s
+
 src/renderer/renderer.obj: src/renderer/renderer.c.obj
 
 .PHONY : src/renderer/renderer.obj
@@ -571,6 +760,9 @@ help:
 	@echo ... src/math/vector.obj
 	@echo ... src/math/vector.i
 	@echo ... src/math/vector.s
+	@echo ... src/memory/mmemory.obj
+	@echo ... src/memory/mmemory.i
+	@echo ... src/memory/mmemory.s
 	@echo ... src/platform/platform.obj
 	@echo ... src/platform/platform.i
 	@echo ... src/platform/platform.s
@@ -583,6 +775,12 @@ help:
 	@echo ... src/renderer/context/context.obj
 	@echo ... src/renderer/context/context.i
 	@echo ... src/renderer/context/context.s
+	@echo ... src/renderer/mesh/mesh.obj
+	@echo ... src/renderer/mesh/mesh.i
+	@echo ... src/renderer/mesh/mesh.s
+	@echo ... src/renderer/object/index_buffer.obj
+	@echo ... src/renderer/object/index_buffer.i
+	@echo ... src/renderer/object/index_buffer.s
 	@echo ... src/renderer/object/opengl/ogl_index_buffer.obj
 	@echo ... src/renderer/object/opengl/ogl_index_buffer.i
 	@echo ... src/renderer/object/opengl/ogl_index_buffer.s
@@ -598,6 +796,18 @@ help:
 	@echo ... src/renderer/object/opengl/ogl_vertex_buffer.obj
 	@echo ... src/renderer/object/opengl/ogl_vertex_buffer.i
 	@echo ... src/renderer/object/opengl/ogl_vertex_buffer.s
+	@echo ... src/renderer/object/shader.obj
+	@echo ... src/renderer/object/shader.i
+	@echo ... src/renderer/object/shader.s
+	@echo ... src/renderer/object/texture.obj
+	@echo ... src/renderer/object/texture.i
+	@echo ... src/renderer/object/texture.s
+	@echo ... src/renderer/object/vertex_array.obj
+	@echo ... src/renderer/object/vertex_array.i
+	@echo ... src/renderer/object/vertex_array.s
+	@echo ... src/renderer/object/vertex_buffer.obj
+	@echo ... src/renderer/object/vertex_buffer.i
+	@echo ... src/renderer/object/vertex_buffer.s
 	@echo ... src/renderer/renderer.obj
 	@echo ... src/renderer/renderer.i
 	@echo ... src/renderer/renderer.s

@@ -25,6 +25,7 @@ static void ogl_initialize(m_texture* self, const char* image){
     u32 id = 0;
 
     int width, height, channels;
+    stbi_set_flip_vertically_on_load(TRUE);  
     u8* data = stbi_load(image, &width, &height, &channels, 0);
     M_ASSERT(data);
     self->width = width;
@@ -33,7 +34,7 @@ static void ogl_initialize(m_texture* self, const char* image){
     glCreateTextures(GL_TEXTURE_2D, 1, &id);
     glTextureStorage2D(id, 1, GL_RGB8, self->width, self->height);
 
-    glTextureParameteri(id, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTextureParameteri(id, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTextureParameteri(id, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     glTextureSubImage2D(id, 0, 0, 0, self->width, self->height, GL_RGB, GL_UNSIGNED_BYTE, data);

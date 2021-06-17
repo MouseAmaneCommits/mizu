@@ -29,6 +29,11 @@ CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/math/vector.c
 CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/math/vector.h
 
+CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/core/logger.h
+CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/memory/mmemory.c
+CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/memory/mmemory.h
+
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/memory/mmemory.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform.c
@@ -57,6 +62,28 @@ CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/platform/platform
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/api/opengl_context.h
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.c
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.h
+
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/core/logger.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/math/mat4.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/math/math.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/math/vector.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/memory/mmemory.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/renderer/mesh/mesh.c
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/renderer/mesh/mesh.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/renderer/object/index_buffer.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/renderer/object/shader.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/renderer/object/texture.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/renderer/object/vertex_array.h
+CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/renderer/object/vertex_buffer.h
+
+CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.obj: ../src/platform/platform.h
+CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.obj: ../src/renderer/context/context.h
+CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.obj: ../src/renderer/object/index_buffer.c
+CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.obj: ../src/renderer/object/index_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.obj: ../src/renderer/object/opengl/ogl_index_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/index_buffer.c.obj: ../src/renderer/renderer.h
 
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../../vendor/include/KHR/khrplatform.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../../vendor/include/glad/glad.h
@@ -95,6 +122,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/me
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/index_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.c
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/vertex_array.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/vertex_buffer.h
 
@@ -105,6 +133,43 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/m
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.c
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/vertex_buffer.h
+
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/math/mat4.h
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/math/math.h
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/math/vector.h
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/platform/platform.h
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/renderer/context/context.h
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/renderer/object/opengl/ogl_shader.h
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/renderer/object/shader.c
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/renderer/object/shader.h
+CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj: ../src/renderer/renderer.h
+
+CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/platform/platform.h
+CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/context/context.h
+CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/object/opengl/ogl_texture.h
+CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/object/texture.c
+CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/object/texture.h
+CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/renderer.h
+
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/platform/platform.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/renderer/context/context.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/renderer/object/index_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/renderer/object/vertex_array.c
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/renderer/object/vertex_array.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/renderer/object/vertex_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/renderer/renderer.h
+
+CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj: ../src/platform/platform.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj: ../src/renderer/context/context.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj: ../src/renderer/object/vertex_buffer.c
+CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj: ../src/renderer/object/vertex_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj: ../src/renderer/renderer.h
 
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/memory/mmemory.h

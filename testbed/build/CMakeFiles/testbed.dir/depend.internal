@@ -16,6 +16,7 @@ CMakeFiles/testbed.dir/src/main.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/mesh/mesh.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/index_buffer.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_index_buffer.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_shader.h

@@ -93,12 +93,12 @@ clean: CMakeFiles/mizu.dir/clean
 CMakeFiles/mizu.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target mizu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target mizu"
 .PHONY : CMakeFiles/mizu.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mizu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" 16
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/mizu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" 0
 .PHONY : CMakeFiles/mizu.dir/rule
