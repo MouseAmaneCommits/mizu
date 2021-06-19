@@ -4,3 +4,4 @@ Mizu is an open source game engine written entirely in C.
 
 #
 Currently does not support linux, although there are linux function declarations...
+Linux users, feel free to add a linux binding if you want cuz im too lazy to do it.
