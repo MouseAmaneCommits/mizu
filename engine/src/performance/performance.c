@@ -14,6 +14,6 @@ void time_it_end(){
     end = clock();
 }
 
-f32 time_get_elapsed(){
-    return (float) (end-begin);
+f64 time_get_elapsed(){
+    return (f64) (end-begin) / CLOCKS_PER_SEC;
 }

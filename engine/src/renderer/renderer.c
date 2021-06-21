@@ -100,15 +100,32 @@ void m_submit(m_vertex_array* array, m_shader* shader, mat4* model){
     append_to_render_queue(render_queue, render_package);
 }
 
+void m_submit_with_texture(m_vertex_array* array, m_shader* shader, m_texture* texture, mat4* model){
+    if(array->bind == NULL || shader->bind == NULL || texture->bind == NULL){ // test to see, if one of the functions is initialized, since you can't really say if(struct == NULL), cuz thats not a thing in c
+        M_ERROR("Shader or Array or Texture cannot be NULL!");
+    }
+
+    m_package* render_package = QUICK_MALLOC(m_package);
+    memset(render_package, 0, sizeof(m_package));
+    render_package->array = array;
+    render_package->shader = shader;
+    render_package->model = model;
+    render_package->uses_texture = TRUE; render_package->o_texture = texture;
+    append_to_render_queue(render_queue, render_package);
+}
+
 void m_flush(){
     time_it_begin();
 
+    if(camera->o_clear_color != NULL) context->set_clear_color(camera->o_clear_color[0], camera->o_clear_color[1], camera->o_clear_color[2], camera->o_clear_color[3]);
+
     for(u32 i = 0; i < render_queue->size; i++){
         m_package* package = dequeue_render_queue(render_queue);
-        
+        if(package->uses_texture) package->o_texture->bind(package->o_texture);
         package->shader->bind(package->shader);
 
         // Set all uniforms
+        if(package->uses_texture) package->shader->set_int(package->shader, "tex", package->o_texture->bind_slot);
         package->shader->set_mat4(package->shader, "model", *package->model);
         package->shader->set_mat4(package->shader, "view", camera->view);
         package->shader->set_mat4(package->shader, "proj", camera->proj);
@@ -116,6 +133,8 @@ void m_flush(){
         package->array->draw(package->array);
 
         package->shader->unbind(package->shader);
+        if(package->uses_texture) package->o_texture->unbind(package->o_texture);
+
         free(package);
     }
 

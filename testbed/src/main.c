@@ -34,11 +34,12 @@ u32 indices[] = {
 
 static m_camera* camera;
 static m_vertex_array test; static m_shader shader_test; static mat4 test_model;
-static m_vertex_array other_test;
-static m_shader shader_other_test;
+static m_vertex_array other_test; static m_shader shader_other_test; static mat4 other_test_model; static m_texture texture;
 
 void init_vao(){
     test_model = m_identity_matrix();
+    other_test_model = m_identity_matrix();
+    m_translate_matrix(&other_test_model, m_init_vec3(1.2f, 0, 0));
 
     m_vertex_buffer_layout layout;
     layout.index = 0;
@@ -66,6 +67,10 @@ void init_vao(){
     test.add_vbo(&test, buf);
     test.add_vbo(&test, tbuf);
     test.bind_ibo(&test, ibo);
+
+    m_init_shader(&shader_test, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
+
+    m_init_texture(&texture, 0, "mizu logo.jpg");
 }
 
 void init_other_vao(){
@@ -96,22 +101,25 @@ void init_other_vao(){
     other_test.add_vbo(&other_test, tbuf);
     other_test.bind_ibo(&other_test, ibo);
 
-    m_init_shader(&shader_test, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
+    m_init_shader(&shader_other_test, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
 }
 
 void fl_start(){
     init_vao();
     init_other_vao();
 
-    camera = (m_camera*)malloc(sizeof(m_camera));
+    camera = QUICK_MALLOC(m_camera);
     memset(camera, 0, sizeof(m_camera));
     camera->view = m_identity_matrix();
     camera->proj = m_orthographic(-1, 1, -1, 1, 0.01f, 1000.0f);
+    camera->o_clear_color[0] = 0.0f; camera->o_clear_color[1] = 0.5f; camera->o_clear_color[2] = 1.0f; camera->o_clear_color[3] = 0.0f;
     m_bind_camera(camera);
 }
 
 void fl_update(){
+    m_translate_matrix(&other_test_model, m_init_vec3(-0.001f, 0, 0));
     m_submit(&test, &shader_test, &test_model);
+    m_submit_with_texture(&test, &shader_other_test, &texture, &other_test_model);
 }
 
 void fl_stop(){

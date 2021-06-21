@@ -60,7 +60,6 @@ void ogl_init(){
 
 void ogl_begin(){
 	glEnable(GL_DEPTH_TEST);
-	glClearColor(1, 0, 0, 0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
@@ -76,10 +75,15 @@ void ogl_reshape(u32 width, u32 height){
 	glViewport(0, 0, width, height);
 }
 
+void ogl_clear_color(float r, float g, float b, float a){
+	glClearColor(r, g, b, a);
+}
+
 void m_init_context_ogl(m_context* context){
     context->init = ogl_init;
     context->begin_frame = ogl_begin;
     context->end_frame = ogl_end;
 	context->reshape = ogl_reshape;
+	context->set_clear_color = ogl_clear_color;
     self = context;
 }

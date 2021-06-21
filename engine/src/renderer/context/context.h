@@ -13,6 +13,7 @@ typedef struct {
     void (*begin_frame)(void);
     void (*end_frame)(void);
     void(*reshape)(u32, u32);
+    void(*set_clear_color)(float, float, float, float);
     m_renderer_api api;
 }m_context;
 
