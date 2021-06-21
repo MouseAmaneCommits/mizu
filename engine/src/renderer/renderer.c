@@ -30,7 +30,7 @@ static b8 is_render_queue_empty(m_render_queue* queue){
 
 static void append_to_render_queue(m_render_queue* queue, m_package* package){
     if(is_render_queue_full(queue)){
-        M_WARN("Too many packets sent to the renderer! Ignored other packets...");
+        //M_WARN("Too many packets sent to the renderer! Ignored other packets...");
         return;
     }
     queue->rear = (queue->rear + 1) % queue->capacity;

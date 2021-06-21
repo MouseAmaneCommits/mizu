@@ -14,7 +14,7 @@ typedef struct {
     mat4* model;
 }m_package;
 
-#define INITIAL_TOTAL_PACKAGE_SIZE 1000
+#define INITIAL_TOTAL_PACKAGE_SIZE 999999
 typedef struct {
     m_package* packages[INITIAL_TOTAL_PACKAGE_SIZE];
     u32 front, rear, size;
