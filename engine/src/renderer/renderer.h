@@ -15,7 +15,8 @@ typedef struct {
 #define INITIAL_TOTAL_PACKAGE_SIZE 1000
 typedef struct {
     m_package* packages[INITIAL_TOTAL_PACKAGE_SIZE];
-    u32 location;
+    u32 front, rear, size;
+    u32 capacity;
 }m_render_queue;
 
 typedef struct {

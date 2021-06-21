@@ -13,26 +13,62 @@ static b8 initialized = FALSE;
 static m_camera* camera;
 static m_render_queue* render_queue;
 
+
 static void init_render_queue(m_render_queue* queue){
-    queue->location = 0;
+    queue->capacity = 1000;
+    queue->front = queue->size = 0;
+    queue->rear = queue->capacity-1;
+}
+
+static b8 is_render_queue_full(m_render_queue* queue){
+    return (queue->size == queue->capacity);
+}
+
+static b8 is_render_queue_empty(m_render_queue* queue){
+    return (queue->size == 0);
 }
 
 static void append_to_render_queue(m_render_queue* queue, m_package* package){
-    if(queue->location < INITIAL_TOTAL_PACKAGE_SIZE){
-        queue->packages[queue->location] = package;
-        queue->location++;
-    }else{
+    if(is_render_queue_full(queue)){
         M_WARN("Too many packets sent to the renderer! Ignored other packets...");
+        return;
     }
+    queue->rear = (queue->rear + 1) % queue->capacity;
+    queue->packages[queue->rear] = package;
+    queue->size++;
 }
 
-static void clear_render_queue(m_render_queue* queue){
-    queue->location = 0;
+static m_package* dequeue_render_queue(m_render_queue* queue){
+    if(is_render_queue_empty(queue)){
+        M_ERROR("Render queue empty, cannot dequeue!");
+        return NULL;
+    }
+    m_package* pck = queue->packages[queue->front];
+    queue->front = (queue->front + 1) % queue->capacity;
+    queue->size--;
+    return pck;
+}
+
+static m_package* front_render_queue(m_render_queue* queue){
+    if(is_render_queue_empty(queue)){
+        M_ERROR("Render queue empty, cannot acquire front of render queue!");
+        return NULL;
+    }
+    return queue->packages[queue->front];
+}
+
+static m_package* rear_render_queue(m_render_queue* queue){
+    if(is_render_queue_empty(queue)){
+        M_ERROR("Render queue empty, cannot acquire front of render queue!");
+        return NULL;
+    }
+    return queue->packages[queue->rear];
 }
 
 void m_init_renderer(m_platform* platform, m_renderer_api api){
     render_queue = QUICK_MALLOC(m_render_queue);
     memset(render_queue, 0, sizeof(m_render_queue));
+    init_render_queue(render_queue);
 
     context = QUICK_MALLOC(m_context);
     memset(context, 0, sizeof(m_context));
@@ -66,21 +102,23 @@ void m_submit(m_vertex_array* array, m_shader* shader, mat4* model){
 
 void m_flush(){
     time_it_begin();
-    for(u32 i = 0; i < render_queue->location; i++){
-        render_queue->packages[i]->shader->bind(render_queue->packages[i]->shader);
+
+    for(u32 i = 0; i < render_queue->size; i++){
+        m_package* package = dequeue_render_queue(render_queue);
+        
+        package->shader->bind(package->shader);
 
         // Set all uniforms
-        render_queue->packages[i]->shader->set_mat4(render_queue->packages[i]->shader, "model", *render_queue->packages[i]->model);
-        render_queue->packages[i]->shader->set_mat4(render_queue->packages[i]->shader, "view", camera->view);
-        render_queue->packages[i]->shader->set_mat4(render_queue->packages[i]->shader, "proj", camera->proj);
+        package->shader->set_mat4(package->shader, "model", *package->model);
+        package->shader->set_mat4(package->shader, "view", camera->view);
+        package->shader->set_mat4(package->shader, "proj", camera->proj);
         // Its render time!
-        render_queue->packages[i]->array->draw(render_queue->packages[i]->array);
+        package->array->draw(package->array);
 
-        render_queue->packages[i]->shader->unbind(render_queue->packages[i]->shader);
-        free(render_queue->packages[i]);
+        package->shader->unbind(package->shader);
+        free(package);
     }
 
-    clear_render_queue(render_queue);
     time_it_end();
 
     M_INFO("Elapsed time (renderer-flush) %f", time_get_elapsed());
