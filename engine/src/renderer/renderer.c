@@ -52,6 +52,10 @@ void m_bind_camera(m_camera* cam){
 }
 
 void m_submit(m_vertex_array* array, m_shader* shader, mat4* model){
+    if(array->bind == NULL || shader->bind == NULL){ // test to see, if one of the functions is initialized, since you can't really say if(struct == NULL), cuz thats not a thing in c
+        M_ERROR("Shader or Array cannot be NULL!");
+    }
+
     m_package* render_package = QUICK_MALLOC(m_package);
     memset(render_package, 0, sizeof(m_package));
     render_package->array = array;
