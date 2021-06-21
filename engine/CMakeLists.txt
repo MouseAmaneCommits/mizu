@@ -18,5 +18,5 @@ src/renderer/renderer.c src/renderer/context/context.c src/renderer/context/api/
 src/renderer/object/opengl/ogl_vertex_array.c src/renderer/object/opengl/ogl_vertex_buffer.c src/renderer/object/opengl/ogl_shader.c src/renderer/object/opengl/ogl_index_buffer.c src/renderer/object/opengl/ogl_texture.c 
 src/math/mat4.c src/math/vector.c 
 ../vendor/src/glad.c
-src/renderer/mesh/mesh.c
+src/scripting/script.c
 )

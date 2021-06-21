@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Opact/Desktop/mizu engine/editor/src/editor.h
+
+C:/Users/Opact/Desktop/mizu engine/editor/src/main.c
+editor.h
+C:/Users/Opact/Desktop/mizu engine/editor/src/editor.h
+../../engine/src/core/application.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+layer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
+../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+

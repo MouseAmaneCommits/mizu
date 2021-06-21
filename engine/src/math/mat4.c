@@ -111,6 +111,21 @@ void m_translate_matrix(mat4* left, vec3 value){
     left->matrix[3][2] += value.z;
 }
 
+mat4 m_stitch_matrix(transform* the_transform){
+    mat4 matrix = m_identity_matrix();
+    matrix.matrix[3][0] = the_transform->position.x;
+    matrix.matrix[3][1] = the_transform->position.y;
+    matrix.matrix[3][2] = the_transform->position.z;
+
+    matrix.matrix[0][0] = the_transform->rotation.x;
+    matrix.matrix[1][1] = the_transform->rotation.y;
+    matrix.matrix[2][2] = the_transform->rotation.z;
+
+    // TODO: add rotation
+
+    return matrix;
+}
+
 void m_rotate_matrix(mat4* left, vec3 value){
     float m_x[4][4] = {
         {1, 0, 0, 0},
@@ -137,6 +152,12 @@ void m_rotate_matrix(mat4* left, vec3 value){
     mat4 rotation = m_mul_matrix(rot_x, rot_y);
     rotation = m_mul_matrix(rotation, rot_z);
     (*left) = m_mul_matrix((*left), rotation);
+}
+
+void m_scale_matrix(mat4* left, float scale_factor){
+    left->matrix[0][0] *= scale_factor;
+    left->matrix[1][1] *= scale_factor;
+    left->matrix[2][2] *= scale_factor;
 }
 
 float* m_convert_matrix_to_float_array(mat4 mat){

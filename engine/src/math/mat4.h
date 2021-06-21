@@ -2,6 +2,7 @@
 
 #include "../defines.h"
 #include "vector.h"
+#include "transform.h"
 
 typedef struct {
     float matrix[4][4];
@@ -17,8 +18,11 @@ MAPI mat4 m_sub_matrix(mat4 left, mat4 right);
 
 MAPI void m_translate_matrix(mat4* left, vec3 value);
 MAPI void m_rotate_matrix(mat4* left, vec3 value);
+MAPI void m_scale_matrix(mat4* left, float scale_factor);
 
 MAPI mat4 m_mul_matrix(mat4 left, mat4 right);
+
+MAPI mat4 m_stitch_matrix(transform* the_transform);
 
 MAPI float* m_convert_matrix_to_float_array(mat4 mat);
 

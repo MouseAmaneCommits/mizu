@@ -1,5 +1,7 @@
 #pragma once
 
+#define QUICK_MALLOC(X) (X*)malloc(sizeof(X))
+
 /*- Typedefs -*/
 typedef void (*fn_ptr);
 

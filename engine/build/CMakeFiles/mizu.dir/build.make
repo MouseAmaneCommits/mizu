@@ -370,19 +370,19 @@ CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.s: cmak
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Opact\Desktop\mizu engine\vendor\src\glad.c" -o CMakeFiles\mizu.dir\C_\Users\Opact\Desktop\mizu_engine\vendor\src\glad.c.s
 
-CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: CMakeFiles/mizu.dir/flags.make
-CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
-CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj: ../src/renderer/mesh/mesh.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\mesh\mesh.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\mesh\mesh.c"
+CMakeFiles/mizu.dir/src/scripting/script.c.obj: CMakeFiles/mizu.dir/flags.make
+CMakeFiles/mizu.dir/src/scripting/script.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
+CMakeFiles/mizu.dir/src/scripting/script.c.obj: ../src/scripting/script.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/mizu.dir/src/scripting/script.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\scripting\script.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\scripting\script.c"
 
-CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\mesh\mesh.c" > CMakeFiles\mizu.dir\src\renderer\mesh\mesh.c.i
+CMakeFiles/mizu.dir/src/scripting/script.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mizu.dir/src/scripting/script.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Opact\Desktop\mizu engine\engine\src\scripting\script.c" > CMakeFiles\mizu.dir\src\scripting\script.c.i
 
-CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\mesh\mesh.c" -o CMakeFiles\mizu.dir\src\renderer\mesh\mesh.c.s
+CMakeFiles/mizu.dir/src/scripting/script.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mizu.dir/src/scripting/script.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Opact\Desktop\mizu engine\engine\src\scripting\script.c" -o CMakeFiles\mizu.dir\src\scripting\script.c.s
 
 # Object files for target mizu
 mizu_OBJECTS = \
@@ -407,7 +407,7 @@ mizu_OBJECTS = \
 "CMakeFiles/mizu.dir/src/math/mat4.c.obj" \
 "CMakeFiles/mizu.dir/src/math/vector.c.obj" \
 "CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj" \
-"CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj"
+"CMakeFiles/mizu.dir/src/scripting/script.c.obj"
 
 # External object files for target mizu
 mizu_EXTERNAL_OBJECTS =
@@ -433,7 +433,7 @@ libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/math/mat4.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/math/vector.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj
-libmizu.dll: CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj
+libmizu.dll: CMakeFiles/mizu.dir/src/scripting/script.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/build.make
 libmizu.dll: CMakeFiles/mizu.dir/linklibs.rsp
 libmizu.dll: CMakeFiles/mizu.dir/objects1.rsp

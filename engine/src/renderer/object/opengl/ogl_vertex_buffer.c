@@ -18,7 +18,8 @@ static void ogl_unbind(m_vertex_buffer* self){
 }
 
 static void ogl_set_layout(m_vertex_buffer* self, m_vertex_buffer_layout* layout){
-    self->layout = layout;
+    self->layout.index = layout->index;
+    self->layout.size = layout->size;
 }
 
 void m_init_vertex_buffer_opengl(m_vertex_buffer* self, float* vertices, u32 size_of_vertices){

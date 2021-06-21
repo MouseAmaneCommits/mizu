@@ -2,8 +2,10 @@
 
 #include "../renderer/renderer.h"
 
+#include "../memory/mmemory.h"
 #include <sys/time.h>
 #include <malloc.h>
+#include "logger.h"
 
 void m_init_application(m_application* self){
     self->layer_index = 0;
@@ -58,4 +60,8 @@ void m_run_application(m_application* self, u32 x, u32 y, u32 width, u32 height,
     }
 
     m_destroy_platform(&self->platform);
+
+    if(m_leak()){
+        M_WARN("Memory leak!");
+    }
 }

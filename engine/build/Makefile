@@ -412,33 +412,6 @@ src/renderer/context/context.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/context/context.c.s
 .PHONY : src/renderer/context/context.c.s
 
-src/renderer/mesh/mesh.obj: src/renderer/mesh/mesh.c.obj
-
-.PHONY : src/renderer/mesh/mesh.obj
-
-# target to build an object file
-src/renderer/mesh/mesh.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.obj
-.PHONY : src/renderer/mesh/mesh.c.obj
-
-src/renderer/mesh/mesh.i: src/renderer/mesh/mesh.c.i
-
-.PHONY : src/renderer/mesh/mesh.i
-
-# target to preprocess a source file
-src/renderer/mesh/mesh.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.i
-.PHONY : src/renderer/mesh/mesh.c.i
-
-src/renderer/mesh/mesh.s: src/renderer/mesh/mesh.c.s
-
-.PHONY : src/renderer/mesh/mesh.s
-
-# target to generate assembly for a file
-src/renderer/mesh/mesh.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/mesh/mesh.c.s
-.PHONY : src/renderer/mesh/mesh.c.s
-
 src/renderer/object/index_buffer.obj: src/renderer/object/index_buffer.c.obj
 
 .PHONY : src/renderer/object/index_buffer.obj
@@ -736,6 +709,33 @@ src/renderer/renderer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/renderer.c.s
 .PHONY : src/renderer/renderer.c.s
 
+src/scripting/script.obj: src/scripting/script.c.obj
+
+.PHONY : src/scripting/script.obj
+
+# target to build an object file
+src/scripting/script.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scripting/script.c.obj
+.PHONY : src/scripting/script.c.obj
+
+src/scripting/script.i: src/scripting/script.c.i
+
+.PHONY : src/scripting/script.i
+
+# target to preprocess a source file
+src/scripting/script.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scripting/script.c.i
+.PHONY : src/scripting/script.c.i
+
+src/scripting/script.s: src/scripting/script.c.s
+
+.PHONY : src/scripting/script.s
+
+# target to generate assembly for a file
+src/scripting/script.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scripting/script.c.s
+.PHONY : src/scripting/script.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -775,9 +775,6 @@ help:
 	@echo ... src/renderer/context/context.obj
 	@echo ... src/renderer/context/context.i
 	@echo ... src/renderer/context/context.s
-	@echo ... src/renderer/mesh/mesh.obj
-	@echo ... src/renderer/mesh/mesh.i
-	@echo ... src/renderer/mesh/mesh.s
 	@echo ... src/renderer/object/index_buffer.obj
 	@echo ... src/renderer/object/index_buffer.i
 	@echo ... src/renderer/object/index_buffer.s
@@ -811,6 +808,9 @@ help:
 	@echo ... src/renderer/renderer.obj
 	@echo ... src/renderer/renderer.i
 	@echo ... src/renderer/renderer.s
+	@echo ... src/scripting/script.obj
+	@echo ... src/scripting/script.i
+	@echo ... src/scripting/script.s
 .PHONY : help
 
 

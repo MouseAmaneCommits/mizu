@@ -11,7 +11,10 @@
         "mat4.h": "c",
         "mizu_thread.h": "c",
         "mmemory.h": "c",
-        "ogl_shader.h": "c"
+        "ogl_shader.h": "c",
+        "nuklear.h": "c",
+        "entity.h": "c",
+        "malloc.h": "c"
     },
     "editor.cursorStyle": "line",
     "editor.cursorWidth": 8,

@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "../../engine/src/core/application.h"
 #include "../../engine/src/core/logger.h"
 #include "../../engine/src/renderer/object/opengl/ogl_vertex_array.h"
@@ -6,7 +5,7 @@
 #include "../../engine/src/renderer/object/opengl/ogl_index_buffer.h"
 #include "../../engine/src/renderer/object/opengl/ogl_shader.h"
 #include "../../engine/src/renderer/object/opengl/ogl_texture.h"
-#include "../../engine/src/renderer/mesh/mesh.h"
+#include "../../engine/src/renderer/renderer.h"
 #include <malloc.h>
 #include <memory.h>
 
@@ -14,169 +13,66 @@
 #include <sys/time.h>
 #include <glad/glad.h>
 
-// static float vertices[] = {
-//      -1.0f,-1.0f,-1.0f, // triangle 1 : begin
-//     -1.0f,-1.0f, 1.0f,
-//     -1.0f, 1.0f, 1.0f, // triangle 1 : end
-//     1.0f, 1.0f,-1.0f, // triangle 2 : begin
-//     -1.0f,-1.0f,-1.0f,
-//     -1.0f, 1.0f,-1.0f, // triangle 2 : end
-//     1.0f,-1.0f, 1.0f,
-//     -1.0f,-1.0f,-1.0f,
-//     1.0f,-1.0f,-1.0f,
-//     1.0f, 1.0f,-1.0f,
-//     1.0f,-1.0f,-1.0f,
-//     -1.0f,-1.0f,-1.0f,
-//     -1.0f,-1.0f,-1.0f,
-//     -1.0f, 1.0f, 1.0f,
-//     -1.0f, 1.0f,-1.0f,
-//     1.0f,-1.0f, 1.0f,
-//     -1.0f,-1.0f, 1.0f,
-//     -1.0f,-1.0f,-1.0f,
-//     -1.0f, 1.0f, 1.0f,
-//     -1.0f,-1.0f, 1.0f,
-//     1.0f,-1.0f, 1.0f,
-//     1.0f, 1.0f, 1.0f,
-//     1.0f,-1.0f,-1.0f,
-//     1.0f, 1.0f,-1.0f,
-//     1.0f,-1.0f,-1.0f,
-//     1.0f, 1.0f, 1.0f,
-//     1.0f,-1.0f, 1.0f,
-//     1.0f, 1.0f, 1.0f,
-//     1.0f, 1.0f,-1.0f,
-//     -1.0f, 1.0f,-1.0f,
-//     1.0f, 1.0f, 1.0f,
-//     -1.0f, 1.0f,-1.0f,
-//     -1.0f, 1.0f, 1.0f,
-//     1.0f, 1.0f, 1.0f,
-//     -1.0f, 1.0f, 1.0f,
-//     1.0f,-1.0f, 1.0f
-// };
+f32 vertices[] = {
+     0.5f,  0.5f, 0.0f,
+     0.5f, -0.5f, 0.0f,
+    -0.5f, -0.5f, 0.0f,
+    -0.5f,  0.5f, 0.0f 
+};
+f32 texture_coords[] = {
+    // texture coords
+    1.0f, 1.0f,   // top right
+    1.0f, 0.0f,   // bottom ri
+    0.0f, 0.0f,   // bottom le
+    0.0f, 1.0f    // top left 
+};
 
-// static float texCoords[] = {
-//  0.000059f, 1.0f-0.000004f,
-//     0.000103f, 1.0f-0.336048f,
-//     0.335973f, 1.0f-0.335903f,
-//     1.000023f, 1.0f-0.000013f,
-//     0.667979f, 1.0f-0.335851f,
-//     0.999958f, 1.0f-0.336064f,
-//     0.667979f, 1.0f-0.335851f,
-//     0.336024f, 1.0f-0.671877f,
-//     0.667969f, 1.0f-0.671889f,
-//     1.000023f, 1.0f-0.000013f,
-//     0.668104f, 1.0f-0.000013f,
-//     0.667979f, 1.0f-0.335851f,
-//     0.000059f, 1.0f-0.000004f,
-//     0.335973f, 1.0f-0.335903f,
-//     0.336098f, 1.0f-0.000071f,
-//     0.667979f, 1.0f-0.335851f,
-//     0.335973f, 1.0f-0.335903f,
-//     0.336024f, 1.0f-0.671877f,
-//     1.000004f, 1.0f-0.671847f,
-//     0.999958f, 1.0f-0.336064f,
-//     0.667979f, 1.0f-0.335851f,
-//     0.668104f, 1.0f-0.000013f,
-//     0.335973f, 1.0f-0.335903f,
-//     0.667979f, 1.0f-0.335851f,
-//     0.335973f, 1.0f-0.335903f,
-//     0.668104f, 1.0f-0.000013f,
-//     0.336098f, 1.0f-0.000071f,
-//     0.000103f, 1.0f-0.336048f,
-//     0.000004f, 1.0f-0.671870f,
-//     0.336024f, 1.0f-0.671877f,
-//     0.000103f, 1.0f-0.336048f,
-//     0.336024f, 1.0f-0.671877f,
-//     0.335973f, 1.0f-0.335903f,
-//     0.667969f, 1.0f-0.671889f,
-//     1.000004f, 1.0f-0.671847f,
-//     0.667979f, 1.0f-0.335851f
-// };
+u32 indices[] = {
+    0, 1, 3,   
+    1, 2, 3    
+};  
 
-// static m_shader shader;
-// static m_vertex_buffer vbo;
-// static m_vertex_buffer tbo;
-// static m_index_buffer ibo;
-// static m_vertex_array array;
-// static m_vertex_buffer_layout layout;
-// static m_vertex_buffer_layout tlayout;
-// static m_texture texture;
-
-static mat4 view;
-static mat4 proj;
-static mat4 model;
-
-static m_mesh2d* mesh;
+static m_camera* camera;
+static m_vertex_array test;
+static m_shader shader_test;
 
 void fl_start(){
-    view = m_identity_matrix();
-    // print_list(m_convert_matrix_to_float_array(view));
-    //proj = m_orthographic(-1, 1, -1, 1, 0.01f, 1000.0f);
-    //proj = m_perspective(-1, 1, -1, 1, 10.0f, 1000.0f);
-    proj = m_identity_matrix();
+    m_vertex_buffer_layout layout;
+    layout.index = 0;
+    layout.size = 3;
 
-    model = m_identity_matrix();
+    m_init_vertex_array(&test);
 
-    // layout.index = 0;
-    // layout.size = 3;
+    m_vertex_buffer* buf = QUICK_MALLOC(m_vertex_buffer);
+    memset(buf, 0, sizeof(m_vertex_buffer));
+    m_init_vertex_buffer(buf, vertices, sizeof(vertices));
+    buf->set_layout(buf, &layout);
 
-    // m_init_vertex_array_opengl(&array);
-    // m_init_vertex_buffer_opengl(&vbo, vertices, sizeof(vertices));
-    // vbo.set_layout(&vbo, &layout);
+    layout.index = 1;
+    layout.size = 2;
 
-    // array.add_vbo(&array, &vbo);
-
-    // m_init_vertex_buffer_opengl(&tbo, texCoords, sizeof(texCoords));
-    // tlayout.index = 1;
-    // tlayout.size = 2;
-    // tbo.set_layout(&tbo, &tlayout);
-    // array.add_vbo(&array, &tbo);
-
-    // m_init_texture_opengl(&texture, 0, "mizu logo.jpg");
+    m_vertex_buffer* tbuf = QUICK_MALLOC(m_vertex_buffer);
+    memset(tbuf, 0, sizeof(m_vertex_buffer));
+    m_init_vertex_buffer(tbuf, texture_coords, sizeof(texture_coords));
+    tbuf->set_layout(tbuf, &layout);
     
-    // m_init_index_buffer_opengl(&ibo, indices, sizeof(indices));
-    // array.bind_ibo(&array, &ibo);
-    
+    m_index_buffer* ibo = QUICK_MALLOC(m_index_buffer);
+    memset(ibo, 0, sizeof(m_index_buffer));
+    m_init_index_buffer(ibo, indices, sizeof(indices));
 
-    // m_init_shader_opengl(&shader, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
+    test.add_vbo(&test, buf);
+    test.add_vbo(&test, tbuf);
+    test.bind_ibo(&test, ibo);
 
-    // // m_translate_matrix(&view, m_init_vec3(0, 0, -1));
-
-    mesh = (m_mesh2d*)malloc(sizeof(m_mesh2d));
-    memset(mesh, 0, sizeof(m_mesh2d));
-    m_init_mesh2d(mesh, M_QUAD, "mizu logo.jpg");
+    camera = (m_camera*)malloc(sizeof(m_camera));
+    memset(camera, 0, sizeof(m_camera));
+    camera->view = m_identity_matrix();
+    camera->proj = m_orthographic(-1, 1, -1, 1, 0.01f, 1000.0f);
+    m_bind_camera(camera);
 }
 
 void fl_update(){
-    // m_translate_matrix(&model, m_init_vec3(0.1f, 0, 0));
-
-    if(GetAsyncKeyState('D')){
-        m_translate_matrix(&view, m_init_vec3(-0.1f, 0, 0));
-    }
-    if(GetAsyncKeyState('A')){
-        m_translate_matrix(&view, m_init_vec3(0.1f, 0, 0));
-    }
-    if(GetAsyncKeyState('S')){
-        m_translate_matrix(&view, m_init_vec3(0, 0, -0.1f));
-    }
-    if(GetAsyncKeyState('W')){
-        m_translate_matrix(&view, m_init_vec3(0, 0, 0.1f));
-    }
-
-    if(GetAsyncKeyState('E')){
-        m_translate_matrix(&view, m_init_vec3(0, -0.1f, 0));
-    }
-    if(GetAsyncKeyState('Q')){
-         m_translate_matrix(&view, m_init_vec3(0, 0.1f, 0));
-    }
-
-    if(GetAsyncKeyState('C')){
-        m_rotate_matrix(&view, m_init_vec3(0, -0.1f, 0));
-    }
-    if(GetAsyncKeyState('Z')){
-        m_rotate_matrix(&view, m_init_vec3(0, 0.1f, 0));
-    }
-
-    m_render_mesh2d(mesh, &view, &model, &proj);
+    test.draw(&test);
 }
 
 void fl_stop(){
