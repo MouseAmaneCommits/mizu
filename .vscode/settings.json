@@ -19,6 +19,7 @@
     "editor.cursorStyle": "line",
     "editor.cursorWidth": 8,
     "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorBlinking": "phase",
     "intelOneAPI.analysis.binary-path": "c:\\Users\\Opact\\Desktop\\mizu engine\\testbed\\build\\testbed.exe",
     "intelOneAPI.analysis.vtune.install-root": "C:\\Program Files (x86)\\intel\\oneAPI\\vtune\\latest",
     "intelOneAPI.analysis.vtune.project-folder": "c:\\Users\\Opact\\Desktop\\mizu engine\\vtune"

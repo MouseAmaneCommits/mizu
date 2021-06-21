@@ -304,6 +304,33 @@ src/memory/mmemory.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/memory/mmemory.c.s
 .PHONY : src/memory/mmemory.c.s
 
+src/performance/performance.obj: src/performance/performance.c.obj
+
+.PHONY : src/performance/performance.obj
+
+# target to build an object file
+src/performance/performance.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/performance/performance.c.obj
+.PHONY : src/performance/performance.c.obj
+
+src/performance/performance.i: src/performance/performance.c.i
+
+.PHONY : src/performance/performance.i
+
+# target to preprocess a source file
+src/performance/performance.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/performance/performance.c.i
+.PHONY : src/performance/performance.c.i
+
+src/performance/performance.s: src/performance/performance.c.s
+
+.PHONY : src/performance/performance.s
+
+# target to generate assembly for a file
+src/performance/performance.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/performance/performance.c.s
+.PHONY : src/performance/performance.c.s
+
 src/platform/platform.obj: src/platform/platform.c.obj
 
 .PHONY : src/platform/platform.obj
@@ -763,6 +790,9 @@ help:
 	@echo ... src/memory/mmemory.obj
 	@echo ... src/memory/mmemory.i
 	@echo ... src/memory/mmemory.s
+	@echo ... src/performance/performance.obj
+	@echo ... src/performance/performance.i
+	@echo ... src/performance/performance.s
 	@echo ... src/platform/platform.obj
 	@echo ... src/platform/platform.i
 	@echo ... src/platform/platform.s

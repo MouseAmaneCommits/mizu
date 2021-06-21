@@ -33,10 +33,13 @@ u32 indices[] = {
 };  
 
 static m_camera* camera;
-static m_vertex_array test;
-static m_shader shader_test;
+static m_vertex_array test; static m_shader shader_test; static mat4 test_model;
+static m_vertex_array other_test;
+static m_shader shader_other_test;
 
-void fl_start(){
+void init_vao(){
+    test_model = m_identity_matrix();
+
     m_vertex_buffer_layout layout;
     layout.index = 0;
     layout.size = 3;
@@ -63,6 +66,42 @@ void fl_start(){
     test.add_vbo(&test, buf);
     test.add_vbo(&test, tbuf);
     test.bind_ibo(&test, ibo);
+}
+
+void init_other_vao(){
+    m_vertex_buffer_layout layout;
+    layout.index = 0;
+    layout.size = 3;
+
+    m_init_vertex_array(&other_test);
+
+    m_vertex_buffer* buf = QUICK_MALLOC(m_vertex_buffer);
+    memset(buf, 0, sizeof(m_vertex_buffer));
+    m_init_vertex_buffer(buf, vertices, sizeof(vertices));
+    buf->set_layout(buf, &layout);
+
+    layout.index = 1;
+    layout.size = 2;
+
+    m_vertex_buffer* tbuf = QUICK_MALLOC(m_vertex_buffer);
+    memset(tbuf, 0, sizeof(m_vertex_buffer));
+    m_init_vertex_buffer(tbuf, texture_coords, sizeof(texture_coords));
+    tbuf->set_layout(tbuf, &layout);
+    
+    m_index_buffer* ibo = QUICK_MALLOC(m_index_buffer);
+    memset(ibo, 0, sizeof(m_index_buffer));
+    m_init_index_buffer(ibo, indices, sizeof(indices));
+
+    other_test.add_vbo(&other_test, buf);
+    other_test.add_vbo(&other_test, tbuf);
+    other_test.bind_ibo(&other_test, ibo);
+
+    m_init_shader(&shader_test, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
+}
+
+void fl_start(){
+    init_vao();
+    init_other_vao();
 
     camera = (m_camera*)malloc(sizeof(m_camera));
     memset(camera, 0, sizeof(m_camera));
@@ -72,7 +111,7 @@ void fl_start(){
 }
 
 void fl_update(){
-    test.draw(&test);
+    m_submit(&test, &shader_test, &test_model);
 }
 
 void fl_stop(){

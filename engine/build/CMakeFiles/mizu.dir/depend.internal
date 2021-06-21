@@ -45,6 +45,10 @@ CMakeFiles/mizu.dir/src/memory/mmemory.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/memory/mmemory.c
  C:/Users/Opact/Desktop/mizu engine/engine/src/memory/mmemory.h
+CMakeFiles/mizu.dir/src/performance/performance.c.obj
+ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/performance/performance.c
+ C:/Users/Opact/Desktop/mizu engine/engine/src/performance/performance.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/memory/mmemory.h
@@ -216,6 +220,7 @@ CMakeFiles/mizu.dir/src/renderer/renderer.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/math/transform.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/memory/mmemory.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/performance/performance.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h

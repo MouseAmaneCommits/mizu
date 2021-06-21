@@ -45,6 +45,10 @@ CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/memory/mmemory.c
 CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/memory/mmemory.h
 
+CMakeFiles/mizu.dir/src/performance/performance.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/performance/performance.c.obj: ../src/performance/performance.c
+CMakeFiles/mizu.dir/src/performance/performance.c.obj: ../src/performance/performance.h
+
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/memory/mmemory.h
 CMakeFiles/mizu.dir/src/platform/platform.c.obj: ../src/platform/platform.c
@@ -215,6 +219,7 @@ CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/math/math.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/math/transform.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/math/vector.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/memory/mmemory.h
+CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/performance/performance.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/platform/platform.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/context/api/opengl_context.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/context/context.h

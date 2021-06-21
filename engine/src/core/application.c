@@ -47,7 +47,7 @@ void m_run_application(m_application* self, u32 x, u32 y, u32 width, u32 height,
             self->layers[i]->update();
         }
         
-
+        m_flush();
         m_end_frame();
 
         // gettimeofday(&stop, NULL);

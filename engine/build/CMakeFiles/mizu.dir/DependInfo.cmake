@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/math/mat4.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/math/vector.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/memory/mmemory.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/memory/mmemory.c.obj"
+  "C:/Users/Opact/Desktop/mizu engine/engine/src/performance/performance.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/performance/performance.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/platform/platform.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform_backend.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/api/opengl_context.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj"

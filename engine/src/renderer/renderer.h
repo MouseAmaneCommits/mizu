@@ -7,9 +7,15 @@
 #include "object/shader.h"
 
 typedef struct {
+    m_vertex_array* array;
+    m_shader* shader;
+    mat4* model;
+}m_package;
+
+#define INITIAL_TOTAL_PACKAGE_SIZE 1000
+typedef struct {
+    m_package* packages[INITIAL_TOTAL_PACKAGE_SIZE];
     u32 location;
-    u32 num_elements;
-    
 }m_render_queue;
 
 typedef struct {
@@ -20,7 +26,9 @@ typedef struct {
 MAPI void m_init_renderer(m_platform* platform, m_renderer_api api);
 MAPI void m_begin_frame();
 MAPI void m_bind_camera(m_camera* camera);
-MAPI void m_submit(m_vertex_array* array, m_shader* shader, m_camera* camera, mat4* model);
+MAPI void m_submit(m_vertex_array* array, m_shader* shader, mat4* model);
+
+MAPI void m_flush();
 MAPI void m_end_frame();
 
 MAPI void m_reshape_renderer(u32 width, u32 height);

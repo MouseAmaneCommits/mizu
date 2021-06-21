@@ -6,6 +6,7 @@
 #include <malloc.h>
 #include <memory.h>
 #include "../core/logger.h"
+#include "../performance/performance.h"
 
 static m_context* context;
 static b8 initialized = FALSE;
@@ -14,15 +15,26 @@ static m_render_queue* render_queue;
 
 static void init_render_queue(m_render_queue* queue){
     queue->location = 0;
-    queue->num_elements = 0;
 }
 
-static void append_to_render_queue(m_render_queue* queue){
-    
+static void append_to_render_queue(m_render_queue* queue, m_package* package){
+    if(queue->location < INITIAL_TOTAL_PACKAGE_SIZE){
+        queue->packages[queue->location] = package;
+        queue->location++;
+    }else{
+        M_WARN("Too many packets sent to the renderer! Ignored other packets...");
+    }
+}
+
+static void clear_render_queue(m_render_queue* queue){
+    queue->location = 0;
 }
 
 void m_init_renderer(m_platform* platform, m_renderer_api api){
-    context = (m_context*)malloc(sizeof(m_context));
+    render_queue = QUICK_MALLOC(m_render_queue);
+    memset(render_queue, 0, sizeof(m_render_queue));
+
+    context = QUICK_MALLOC(m_context);
     memset(context, 0, sizeof(m_context));
 
     m_init_context(context, platform, api);
@@ -39,18 +51,35 @@ void m_bind_camera(m_camera* cam){
     camera = cam;
 }
 
-void m_submit(m_vertex_array* array, m_shader* shader, m_camera* camera, mat4* model){
-    shader->bind(shader);
+void m_submit(m_vertex_array* array, m_shader* shader, mat4* model){
+    m_package* render_package = QUICK_MALLOC(m_package);
+    memset(render_package, 0, sizeof(m_package));
+    render_package->array = array;
+    render_package->shader = shader;
+    render_package->model = model;
+    append_to_render_queue(render_queue, render_package);
+}
 
-    // Set all uniforms
-    shader->set_mat4(shader, "model", *model);
-    shader->set_mat4(shader, "view", camera->view);
-    shader->set_mat4(shader, "proj", camera->proj);
-    // Its render time!
-    array->draw(array);
+void m_flush(){
+    time_it_begin();
+    for(u32 i = 0; i < render_queue->location; i++){
+        render_queue->packages[i]->shader->bind(render_queue->packages[i]->shader);
 
+        // Set all uniforms
+        render_queue->packages[i]->shader->set_mat4(render_queue->packages[i]->shader, "model", *render_queue->packages[i]->model);
+        render_queue->packages[i]->shader->set_mat4(render_queue->packages[i]->shader, "view", camera->view);
+        render_queue->packages[i]->shader->set_mat4(render_queue->packages[i]->shader, "proj", camera->proj);
+        // Its render time!
+        render_queue->packages[i]->array->draw(render_queue->packages[i]->array);
 
-    shader->unbind(shader);
+        render_queue->packages[i]->shader->unbind(render_queue->packages[i]->shader);
+        free(render_queue->packages[i]);
+    }
+
+    clear_render_queue(render_queue);
+    time_it_end();
+
+    M_INFO("Elapsed time (renderer-flush) %f", time_get_elapsed());
 }
 
 void m_end_frame(){
