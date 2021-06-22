@@ -8,12 +8,18 @@
 #include "../core/logger.h"
 #include "../performance/performance.h"
 
+// Camera functions
+void m_translate_camera(m_camera* camera, vec3 translation){
+    m_translate_matrix(&camera->view, translation);
+}
+
+// Global variables
 static m_context* context;
 static b8 initialized = FALSE;
 static m_camera* camera;
 static m_render_queue* render_queue;
 
-
+// Renderer functions
 static void init_render_queue(m_render_queue* queue){
     queue->capacity = 1000;
     queue->front = queue->size = 0;

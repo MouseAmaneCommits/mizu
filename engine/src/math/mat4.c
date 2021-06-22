@@ -9,6 +9,10 @@ float to_radians(float value){
      return value * (M_PI / 180);
 }
 
+float from_radians(float value){
+    return value * (180 / M_PI);
+}
+
 mat4 m_fill_matrix(float m[4][4]){
     mat4 result;
     for(int i = 0; i < 4; i++){
@@ -111,21 +115,6 @@ void m_translate_matrix(mat4* left, vec3 value){
     left->matrix[3][2] += value.z;
 }
 
-mat4 m_stitch_matrix(transform* the_transform){
-    mat4 matrix = m_identity_matrix();
-    matrix.matrix[3][0] = the_transform->position.x;
-    matrix.matrix[3][1] = the_transform->position.y;
-    matrix.matrix[3][2] = the_transform->position.z;
-
-    matrix.matrix[0][0] = the_transform->rotation.x;
-    matrix.matrix[1][1] = the_transform->rotation.y;
-    matrix.matrix[2][2] = the_transform->rotation.z;
-
-    // TODO: add rotation
-
-    return matrix;
-}
-
 void m_rotate_matrix(mat4* left, vec3 value){
     float m_x[4][4] = {
         {1, 0, 0, 0},
@@ -186,20 +175,13 @@ mat4 m_orthographic(float left, float right, float bottom, float top, float near
     return result;
 }
 
-#include <glad/glad.h>
-
-mat4 m_perspective(float left, float right, float bottom, float top, float near, float far){
-    // float radians_fov = to_radians(fov);
-    // M_INFO("Old fov %f, Radians %f", fov, radians_fov);
-    
+mat4 m_perspective(float aspect_ratio, float fov, float near, float far){
     float matrix[4][4] = {
-        {near/right, 0, 0, 0},
-        {0, near/top, 0, 0},
-        {0, 0, ((-far + near)/(far-near)), ((-2 * far * near) / (far-near))},
+        {1 / (aspect_ratio*tan(fov/2)), 0, 0, 0},
+        {0, 1 / (tan(fov/2)), 0, 0},
+        {0, 0, -(far+near)/(far-near), -(2 * far * near) / (far-near)},
         {0, 0, -1, 0}
     };
-
     mat4 result = m_fill_matrix(matrix);
-
     return result;
 }

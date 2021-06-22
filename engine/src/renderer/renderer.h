@@ -27,6 +27,8 @@ typedef struct {
     float o_clear_color[4]; // r,g,b,a
 }m_camera;
 
+MAPI void m_translate_camera(m_camera* camera, vec3 translation);
+
 MAPI void m_init_renderer(m_platform* platform, m_renderer_api api);
 MAPI void m_begin_frame();
 MAPI void m_bind_camera(m_camera* camera);

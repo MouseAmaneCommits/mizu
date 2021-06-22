@@ -190,23 +190,23 @@ void fl_start(){
     memset(camera, 0, sizeof(m_camera));
     camera->view = m_identity_matrix();
     //camera->proj = m_orthographic(-1, 1, -1, 1, 0.01f, 1000.0f);
-    camera->proj = m_perspective(-1, 1, -1, 1, 1, 1000);
+    camera->proj = m_perspective(1280/720, to_radians(10), from_radians(0.1f), from_radians(1000.0f));
     camera->o_clear_color[0] = 0.0f; camera->o_clear_color[1] = 0.5f; camera->o_clear_color[2] = 1.0f; camera->o_clear_color[3] = 0.0f;
     m_bind_camera(camera);
 }
 
 void fl_update(){
     if(GetAsyncKeyState('S')){
-        m_translate_matrix(&camera->view, m_init_vec3(0, 0, -0.01f));
+        m_translate_camera(camera, m_init_vec3(0, 0, -0.1f));
     }
     if(GetAsyncKeyState('W')){
-        m_translate_matrix(&camera->view, m_init_vec3(0, 0, 0.01f));
+        m_translate_camera(camera, m_init_vec3(0, 0, 0.1f));
     }
     if(GetAsyncKeyState('D')){
-        m_translate_matrix(&camera->view, m_init_vec3(-0.1f, 0, 0));
+        m_translate_camera(camera, m_init_vec3(-0.1f, 0, 0));
     }
     if(GetAsyncKeyState('A')){
-        m_translate_matrix(&camera->view, m_init_vec3(0.1f, 0, 0));
+       m_translate_camera(camera, m_init_vec3(0.1f, 0, 0));
     }
 
     m_submit_with_texture(&test, &shader_test, &texture, &test_model);
