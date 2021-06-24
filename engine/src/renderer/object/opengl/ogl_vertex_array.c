@@ -12,10 +12,12 @@
 #include "ogl_vertex_buffer.h"
 #include "../../../core/logger.h"
 
+typedef struct {
+    u32 id;
+}internal_memory;
+
 static void ogl_bind(m_vertex_array* self){
-    u32 id = 0;
-    memcpy(&id, self->unimplemented_data, sizeof(u32));
-    glBindVertexArray(id);
+    glBindVertexArray(((internal_memory*)(self->unimplemented_data))->id);
 }
 
 static void ogl_unbind(m_vertex_array* self){
@@ -74,12 +76,11 @@ static void ogl_bind_ibo(m_vertex_array* self, m_index_buffer* ibo){
 void m_init_vertex_array_opengl(m_vertex_array* array){
     array->ibo_bound = FALSE;
     
-    array->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
-    memset(array->unimplemented_data, 0, UNIMPLEMENTED_DATA_SIZE);
+    array->unimplemented_data = QUICK_MALLOC(internal_memory);
 
     u32 id = 0;
     glGenVertexArrays(1, &id);
-    memcpy(array->unimplemented_data, &id, sizeof(u32));
+    ((internal_memory*)(array->unimplemented_data))->id = id;
 
     array->bind = ogl_bind;
     array->unbind = ogl_unbind;
@@ -94,11 +95,7 @@ void m_destroy_vertex_array_opengl(m_vertex_array* self){
         free(self->vbos[i]);
     }
 
-
-    u32 id;
-    memcpy(&id, self->unimplemented_data, sizeof(u32));
-
-    glDeleteVertexArrays(1, &id);
+    glDeleteVertexArrays(1, ((internal_memory*)(self->unimplemented_data)));
     
     free(self->unimplemented_data);
 }

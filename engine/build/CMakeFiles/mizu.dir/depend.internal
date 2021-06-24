@@ -132,6 +132,18 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_texture.c
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_texture.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/texture.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj
+ ../../vendor/include/KHR/khrplatform.h
+ ../../vendor/include/glad/glad.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/math.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/transform.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_uniform_buffer.c
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/opengl/ogl_uniform_buffer.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/uniform_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj
  ../../vendor/include/KHR/khrplatform.h
  ../../vendor/include/glad/glad.h
@@ -184,6 +196,10 @@ CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj
+ C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/uniform_buffer.c
+ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/uniform_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj
  C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
  C:/Users/Opact/Desktop/mizu engine/engine/src/math/mat4.h

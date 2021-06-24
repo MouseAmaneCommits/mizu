@@ -8,6 +8,8 @@
 #include "../core/logger.h"
 #include "../performance/performance.h"
 
+#include <pthread.h>
+
 // Camera functions
 void m_translate_camera(m_camera* camera, vec3 translation){
     m_translate_matrix(&camera->view, translation);
@@ -120,28 +122,35 @@ void m_submit_with_texture(m_vertex_array* array, m_shader* shader, m_texture* t
     append_to_render_queue(render_queue, render_package);
 }
 
+static void single_flush_command(){
+    m_package *package = dequeue_render_queue(render_queue);
+    if (package->uses_texture)
+        package->o_texture->bind(package->o_texture);
+    package->shader->bind(package->shader);
+
+    // Set all uniforms
+    if (package->uses_texture)
+        package->shader->set_int(package->shader, "tex", package->o_texture->bind_slot);
+    package->shader->set_mat4(package->shader, "model", *package->model);
+    package->shader->set_mat4(package->shader, "view", camera->view);
+    package->shader->set_mat4(package->shader, "proj", camera->proj);
+    // Its render time!
+    package->array->draw(package->array);
+
+    package->shader->unbind(package->shader);
+    if (package->uses_texture)
+        package->o_texture->unbind(package->o_texture);
+
+    free(package);
+}
+
 void m_flush(){
     time_it_begin();
 
     if(camera->o_clear_color != NULL) context->set_clear_color(camera->o_clear_color[0], camera->o_clear_color[1], camera->o_clear_color[2], camera->o_clear_color[3]);
 
     for(u32 i = 0; i < render_queue->size; i++){
-        m_package* package = dequeue_render_queue(render_queue);
-        if(package->uses_texture) package->o_texture->bind(package->o_texture);
-        package->shader->bind(package->shader);
-
-        // Set all uniforms
-        if(package->uses_texture) package->shader->set_int(package->shader, "tex", package->o_texture->bind_slot);
-        package->shader->set_mat4(package->shader, "model", *package->model);
-        package->shader->set_mat4(package->shader, "view", camera->view);
-        package->shader->set_mat4(package->shader, "proj", camera->proj);
-        // Its render time!
-        package->array->draw(package->array);
-
-        package->shader->unbind(package->shader);
-        if(package->uses_texture) package->o_texture->unbind(package->o_texture);
-
-        free(package);
+        single_flush_command();
     }
 
     time_it_end();

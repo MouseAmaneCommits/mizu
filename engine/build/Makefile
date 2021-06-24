@@ -547,6 +547,33 @@ src/renderer/object/opengl/ogl_texture.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.s
 .PHONY : src/renderer/object/opengl/ogl_texture.c.s
 
+src/renderer/object/opengl/ogl_uniform_buffer.obj: src/renderer/object/opengl/ogl_uniform_buffer.c.obj
+
+.PHONY : src/renderer/object/opengl/ogl_uniform_buffer.obj
+
+# target to build an object file
+src/renderer/object/opengl/ogl_uniform_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj
+.PHONY : src/renderer/object/opengl/ogl_uniform_buffer.c.obj
+
+src/renderer/object/opengl/ogl_uniform_buffer.i: src/renderer/object/opengl/ogl_uniform_buffer.c.i
+
+.PHONY : src/renderer/object/opengl/ogl_uniform_buffer.i
+
+# target to preprocess a source file
+src/renderer/object/opengl/ogl_uniform_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.i
+.PHONY : src/renderer/object/opengl/ogl_uniform_buffer.c.i
+
+src/renderer/object/opengl/ogl_uniform_buffer.s: src/renderer/object/opengl/ogl_uniform_buffer.c.s
+
+.PHONY : src/renderer/object/opengl/ogl_uniform_buffer.s
+
+# target to generate assembly for a file
+src/renderer/object/opengl/ogl_uniform_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.s
+.PHONY : src/renderer/object/opengl/ogl_uniform_buffer.c.s
+
 src/renderer/object/opengl/ogl_vertex_array.obj: src/renderer/object/opengl/ogl_vertex_array.c.obj
 
 .PHONY : src/renderer/object/opengl/ogl_vertex_array.obj
@@ -654,6 +681,33 @@ src/renderer/object/texture.s: src/renderer/object/texture.c.s
 src/renderer/object/texture.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/texture.c.s
 .PHONY : src/renderer/object/texture.c.s
+
+src/renderer/object/uniform_buffer.obj: src/renderer/object/uniform_buffer.c.obj
+
+.PHONY : src/renderer/object/uniform_buffer.obj
+
+# target to build an object file
+src/renderer/object/uniform_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj
+.PHONY : src/renderer/object/uniform_buffer.c.obj
+
+src/renderer/object/uniform_buffer.i: src/renderer/object/uniform_buffer.c.i
+
+.PHONY : src/renderer/object/uniform_buffer.i
+
+# target to preprocess a source file
+src/renderer/object/uniform_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.i
+.PHONY : src/renderer/object/uniform_buffer.c.i
+
+src/renderer/object/uniform_buffer.s: src/renderer/object/uniform_buffer.c.s
+
+.PHONY : src/renderer/object/uniform_buffer.s
+
+# target to generate assembly for a file
+src/renderer/object/uniform_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.s
+.PHONY : src/renderer/object/uniform_buffer.c.s
 
 src/renderer/object/vertex_array.obj: src/renderer/object/vertex_array.c.obj
 
@@ -817,6 +871,9 @@ help:
 	@echo ... src/renderer/object/opengl/ogl_texture.obj
 	@echo ... src/renderer/object/opengl/ogl_texture.i
 	@echo ... src/renderer/object/opengl/ogl_texture.s
+	@echo ... src/renderer/object/opengl/ogl_uniform_buffer.obj
+	@echo ... src/renderer/object/opengl/ogl_uniform_buffer.i
+	@echo ... src/renderer/object/opengl/ogl_uniform_buffer.s
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.obj
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.i
 	@echo ... src/renderer/object/opengl/ogl_vertex_array.s
@@ -829,6 +886,9 @@ help:
 	@echo ... src/renderer/object/texture.obj
 	@echo ... src/renderer/object/texture.i
 	@echo ... src/renderer/object/texture.s
+	@echo ... src/renderer/object/uniform_buffer.obj
+	@echo ... src/renderer/object/uniform_buffer.i
+	@echo ... src/renderer/object/uniform_buffer.s
 	@echo ... src/renderer/object/vertex_array.obj
 	@echo ... src/renderer/object/vertex_array.i
 	@echo ... src/renderer/object/vertex_array.s

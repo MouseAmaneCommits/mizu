@@ -7,12 +7,12 @@
 
 #define UNIMPLEMENTED_DATA_SIZE 6553
 
-static void ogl_bind(m_index_buffer* self){
+typedef struct {
     u32 id;
-    memcpy(&id, self->unimplemented_data, sizeof(u32));
-    
-    
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
+}internal_memory;
+
+static void ogl_bind(m_index_buffer* self){
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ((internal_memory*)self->unimplemented_data)->id);
 }
 
 static void ogl_unbind(m_index_buffer* self){
@@ -26,12 +26,11 @@ static void ogl_init(m_index_buffer* self, u32* indices, u32 size){
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, size, indices, GL_STATIC_DRAW);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
-    memcpy(self->unimplemented_data, &id, sizeof(u32));
+    ((internal_memory*)self->unimplemented_data)->id = id;
 }
 
 void m_init_index_buffer_opengl(m_index_buffer* self, u32* indices, u32 size){
-    self->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
-    memset(self->unimplemented_data, 0, UNIMPLEMENTED_DATA_SIZE);
+    self->unimplemented_data = QUICK_MALLOC(internal_memory);
     self->count = size / sizeof(u32); 
 
     ogl_init(self, indices, size);
@@ -42,9 +41,7 @@ void m_init_index_buffer_opengl(m_index_buffer* self, u32* indices, u32 size){
 }
 
 void m_destroy_index_buffer_opengl(m_index_buffer* self){
-    u32 id;
-    memcpy(&id, self->unimplemented_data, sizeof(u32));
-    glDeleteBuffers(1, &id);
+    glDeleteBuffers(1, &((internal_memory*)self->unimplemented_data)->id);
 
     free(self->unimplemented_data);
 }

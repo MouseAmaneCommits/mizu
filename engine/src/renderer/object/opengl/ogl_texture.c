@@ -11,10 +11,12 @@
 
 #define UNIMPLEMENTED_DATA_SIZE 6553
 
+typedef struct {
+    u32 id;
+}internal_memory;
+
 static void ogl_bind(m_texture* self){
-    u32 id = 0;
-    memcpy(&id, self->unimplemented_data, sizeof(u32));
-    glBindTextureUnit(self->bind_slot, id);
+    glBindTextureUnit(self->bind_slot, ((internal_memory*)self->unimplemented_data)->id);
 }
 
 static void ogl_unbind(m_texture* self){
@@ -41,12 +43,11 @@ static void ogl_initialize(m_texture* self, const char* image){
 
     stbi_image_free(data);
 
-    memcpy(self->unimplemented_data, &id, sizeof(u32));
+    ((internal_memory*)self->unimplemented_data)->id = id;
 }
 
 void m_init_texture_opengl(m_texture* self, u32 bind_slot, const char* image){
-    self->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
-    memset(self->unimplemented_data, 0, UNIMPLEMENTED_DATA_SIZE);
+    self->unimplemented_data = QUICK_MALLOC(internal_memory);
     ogl_initialize(self, image);
 
     self->bind_slot = bind_slot;

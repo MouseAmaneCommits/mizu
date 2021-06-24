@@ -132,7 +132,7 @@ void init_vao(){
 
     m_vertex_buffer* buf = QUICK_MALLOC(m_vertex_buffer);
     memset(buf, 0, sizeof(m_vertex_buffer));
-    m_init_vertex_buffer(buf, vertices_cube, sizeof(vertices_cube));
+    m_init_vertex_buffer(buf, vertices, sizeof(vertices));
     buf->set_layout(buf, &layout);
 
     layout.index = 1;
@@ -140,11 +140,16 @@ void init_vao(){
 
     m_vertex_buffer* tbuf = QUICK_MALLOC(m_vertex_buffer);
     memset(tbuf, 0, sizeof(m_vertex_buffer));
-    m_init_vertex_buffer(tbuf, texture_coords_cube, sizeof(texture_coords_cube));
+    m_init_vertex_buffer(tbuf, texture_coords, sizeof(texture_coords));
     tbuf->set_layout(tbuf, &layout);
+
+    m_index_buffer* ibo = QUICK_MALLOC(m_index_buffer);
+    memset(ibo, 0, sizeof(m_index_buffer));
+    m_init_index_buffer(ibo, indices, sizeof(indices));
     
     test.add_vbo(&test, buf);
     test.add_vbo(&test, tbuf);
+    test.bind_ibo(&test, ibo);
 
     m_init_shader(&shader_test, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
 
@@ -208,6 +213,8 @@ void fl_update(){
     if(GetAsyncKeyState('A')){
        m_translate_camera(camera, m_init_vec3(0.1f, 0, 0));
     }
+
+    m_rotate_matrix(&test_model, m_init_vec3(0.01, 0, 0));
 
     m_submit_with_texture(&test, &shader_test, &texture, &test_model);
     // m_submit_with_texture(&test, &shader_other_test, &texture, &other_test_model);

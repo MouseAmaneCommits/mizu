@@ -132,6 +132,18 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/rendere
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/renderer/object/opengl/ogl_texture.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/renderer/object/texture.h
 
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../../vendor/include/KHR/khrplatform.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../../vendor/include/glad/glad.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/math/mat4.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/math/math.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/math/transform.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/math/vector.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/renderer/object/opengl/ogl_uniform_buffer.c
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/renderer/object/opengl/ogl_uniform_buffer.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/renderer/object/shader.h
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/renderer/object/uniform_buffer.h
+
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/KHR/khrplatform.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../../vendor/include/glad/glad.h
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/core/logger.h
@@ -183,6 +195,10 @@ CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/object/te
 CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/object/vertex_array.h
 CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/object/vertex_buffer.h
 CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj: ../src/renderer/renderer.h
+
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj: ../src/renderer/object/uniform_buffer.c
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj: ../src/renderer/object/uniform_buffer.h
 
 CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj: ../src/math/mat4.h

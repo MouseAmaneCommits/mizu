@@ -7,6 +7,10 @@
 
 #define UNIMPLEMENTED_DATA_SIZE 6553
 
+typedef struct {
+    u32 id;
+}internal_memory;
+
 #include <stddef.h>
 #include <glad/glad.h>
 #include <stdlib.h>
@@ -33,9 +37,7 @@ const char * GetGLErrorStr(GLenum err)
 }while(TRUE)
 
 static void ogl_bind(m_shader* self){
-    u32 shader_id = 0;
-    memcpy(&shader_id, self->unimplemented_data, sizeof(u32));
-    glUseProgram(shader_id);
+    glUseProgram(((internal_memory*)self->unimplemented_data)->id);
 }
 
 static void ogl_unbind(m_shader* self){
@@ -74,7 +76,7 @@ static void ogl_create_shader(m_shader* self, const char* vs, const char* fs){
     // glDeleteShader(vertex_shader);
     // glDeleteShader(fragment_shader);
 
-    memcpy(self->unimplemented_data, &program, sizeof(u32));
+    ((internal_memory*)self->unimplemented_data)->id = program;
     // GLint linked;
     // glGetProgramiv(program, GL_LINK_STATUS, &linked);
 
@@ -110,11 +112,8 @@ static char* read_file(const char* file_name){
 }
 
 static b8 ogl_get_uniform_location(m_shader* self, const char* name, u32* loc){
-    u32 shader_id = 0;
-    
-    memcpy(&shader_id, self->unimplemented_data, sizeof(u32));
 
-    int location = glGetUniformLocation(shader_id, name);
+    int location = glGetUniformLocation(((internal_memory*)self->unimplemented_data)->id, name);
 
     if(location == -1){
         return FALSE;
@@ -188,8 +187,7 @@ static void ogl_set_mat4(m_shader* self, const char* name, mat4 value){
 }
 
 void m_init_shader_opengl(m_shader* self, const char* vFilename, const char* fFilename){
-    self->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
-    memset(self->unimplemented_data, 0, UNIMPLEMENTED_DATA_SIZE);
+    self->unimplemented_data = QUICK_MALLOC(internal_memory);
     ogl_create_shader(self, read_file(vFilename), read_file(fFilename));
     
     self->bind = ogl_bind;
@@ -203,9 +201,7 @@ void m_init_shader_opengl(m_shader* self, const char* vFilename, const char* fFi
 }
 
 void m_destroy_shader_opengl(m_shader* self){
-    u32 id;
-    memcpy(&id, self->unimplemented_data, sizeof(u32));
-    glDeleteProgram(id);
+    glDeleteProgram(((internal_memory*)self->unimplemented_data)->id);
 
     free(self->unimplemented_data);
 }

@@ -7,10 +7,12 @@
 
 #define UNIMPLEMENTED_DATA_SIZE 6553
 
+typedef struct{
+    u32 id;
+}internal_memory;
+
 static void ogl_bind(m_vertex_buffer* self){
-    u32 id = 0;
-    memcpy(&id, self->unimplemented_data, sizeof(u32));
-    glBindBuffer(GL_ARRAY_BUFFER, id);
+    glBindBuffer(GL_ARRAY_BUFFER, ((internal_memory*)(self->unimplemented_data))->id);
 }
 
 static void ogl_unbind(m_vertex_buffer* self){
@@ -23,13 +25,12 @@ static void ogl_set_layout(m_vertex_buffer* self, m_vertex_buffer_layout* layout
 }
 
 void m_init_vertex_buffer_opengl(m_vertex_buffer* self, float* vertices, u32 size_of_vertices){
-    self->unimplemented_data = malloc(UNIMPLEMENTED_DATA_SIZE);
+    self->unimplemented_data = QUICK_MALLOC(internal_memory);
 
-    u32 id = 0;
-    glGenBuffers(1, &id);
-    memcpy(self->unimplemented_data, &id, sizeof(u32));
+    ((internal_memory*)(self->unimplemented_data))->id = 0;
+    glGenBuffers(1, &((internal_memory*)(self->unimplemented_data))->id);
 
-    glBindBuffer(GL_ARRAY_BUFFER, id);
+    glBindBuffer(GL_ARRAY_BUFFER, ((internal_memory*)(self->unimplemented_data))->id);
     glBufferData(GL_ARRAY_BUFFER, size_of_vertices, vertices, GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     self->length = size_of_vertices / sizeof(float);
@@ -40,8 +41,7 @@ void m_init_vertex_buffer_opengl(m_vertex_buffer* self, float* vertices, u32 siz
 }
 
 void m_destroy_vertex_buffer_opengl(m_vertex_buffer* self){
-    u32 id;
-    memcpy(self->unimplemented_data, &id, sizeof(u32));
+    u32 id = ((internal_memory*)(self->unimplemented_data))->id;
     glDeleteBuffers(1, &id);
     
     free(self->unimplemented_data);

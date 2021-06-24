@@ -240,7 +240,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 mizu_BINARY_DIR:STATIC=C:/Users/Opact/Desktop/mizu engine/engine/build
 
 //Dependencies for the target
-mizu_LIB_DEPENDS:STATIC=general;opengl32;general;gdi32;
+mizu_LIB_DEPENDS:STATIC=general;opengl32;general;gdi32;general;pthread;
 
 //Value Computed by CMake
 mizu_SOURCE_DIR:STATIC=C:/Users/Opact/Desktop/mizu engine/engine

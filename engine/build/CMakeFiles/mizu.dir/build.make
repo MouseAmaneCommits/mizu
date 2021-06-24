@@ -216,10 +216,24 @@ CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\vertex_buffer.c" -o CMakeFiles\mizu.dir\src\renderer\object\vertex_buffer.c.s
 
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj: CMakeFiles/mizu.dir/flags.make
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj: ../src/renderer/object/uniform_buffer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\object\uniform_buffer.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\uniform_buffer.c"
+
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\uniform_buffer.c" > CMakeFiles\mizu.dir\src\renderer\object\uniform_buffer.c.i
+
+CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\uniform_buffer.c" -o CMakeFiles\mizu.dir\src\renderer\object\uniform_buffer.c.s
+
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/renderer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/mizu.dir/src/renderer/renderer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/mizu.dir/src/renderer/renderer.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\renderer.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\renderer.c"
 
 CMakeFiles/mizu.dir/src/renderer/renderer.c.i: cmake_force
@@ -233,7 +247,7 @@ CMakeFiles/mizu.dir/src/renderer/renderer.c.s: cmake_force
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/renderer/context/context.c.obj: ../src/renderer/context/context.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/mizu.dir/src/renderer/context/context.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/mizu.dir/src/renderer/context/context.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\context\context.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\context\context.c"
 
 CMakeFiles/mizu.dir/src/renderer/context/context.c.i: cmake_force
@@ -247,7 +261,7 @@ CMakeFiles/mizu.dir/src/renderer/context/context.c.s: cmake_force
 CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj: ../src/renderer/context/api/opengl_context.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\context\api\opengl_context.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\context\api\opengl_context.c"
 
 CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.i: cmake_force
@@ -261,7 +275,7 @@ CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.s: cmake_force
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj: ../src/renderer/object/opengl/ogl_vertex_array.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_vertex_array.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_vertex_array.c"
 
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.i: cmake_force
@@ -275,7 +289,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_array.c.s: cmake_force
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj: ../src/renderer/object/opengl/ogl_vertex_buffer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_vertex_buffer.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_vertex_buffer.c"
 
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.i: cmake_force
@@ -289,7 +303,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.s: cmake_forc
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj: ../src/renderer/object/opengl/ogl_shader.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_shader.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_shader.c"
 
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.i: cmake_force
@@ -303,7 +317,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.s: cmake_force
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj: ../src/renderer/object/opengl/ogl_index_buffer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_index_buffer.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_index_buffer.c"
 
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.i: cmake_force
@@ -317,7 +331,7 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.s: cmake_force
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj: ../src/renderer/object/opengl/ogl_texture.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_texture.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_texture.c"
 
 CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.i: cmake_force
@@ -328,10 +342,24 @@ CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_texture.c" -o CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_texture.c.s
 
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: CMakeFiles/mizu.dir/flags.make
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj: ../src/renderer/object/opengl/ogl_uniform_buffer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_uniform_buffer.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_uniform_buffer.c"
+
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_uniform_buffer.c" > CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_uniform_buffer.c.i
+
+CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Opact\Desktop\mizu engine\engine\src\renderer\object\opengl\ogl_uniform_buffer.c" -o CMakeFiles\mizu.dir\src\renderer\object\opengl\ogl_uniform_buffer.c.s
+
 CMakeFiles/mizu.dir/src/math/mat4.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/math/mat4.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/math/mat4.c.obj: ../src/math/mat4.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/mizu.dir/src/math/mat4.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/mizu.dir/src/math/mat4.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\math\mat4.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\math\mat4.c"
 
 CMakeFiles/mizu.dir/src/math/mat4.c.i: cmake_force
@@ -345,7 +373,7 @@ CMakeFiles/mizu.dir/src/math/mat4.c.s: cmake_force
 CMakeFiles/mizu.dir/src/math/vector.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/math/vector.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/math/vector.c.obj: ../src/math/vector.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/mizu.dir/src/math/vector.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/mizu.dir/src/math/vector.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\math\vector.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\math\vector.c"
 
 CMakeFiles/mizu.dir/src/math/vector.c.i: cmake_force
@@ -359,7 +387,7 @@ CMakeFiles/mizu.dir/src/math/vector.c.s: cmake_force
 CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj: C:/Users/Opact/Desktop/mizu\ engine/vendor/src/glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\C_\Users\Opact\Desktop\mizu_engine\vendor\src\glad.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\vendor\src\glad.c"
 
 CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.i: cmake_force
@@ -373,7 +401,7 @@ CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.s: cmak
 CMakeFiles/mizu.dir/src/scripting/script.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/scripting/script.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/scripting/script.c.obj: ../src/scripting/script.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/mizu.dir/src/scripting/script.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/mizu.dir/src/scripting/script.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\scripting\script.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\scripting\script.c"
 
 CMakeFiles/mizu.dir/src/scripting/script.c.i: cmake_force
@@ -387,7 +415,7 @@ CMakeFiles/mizu.dir/src/scripting/script.c.s: cmake_force
 CMakeFiles/mizu.dir/src/performance/performance.c.obj: CMakeFiles/mizu.dir/flags.make
 CMakeFiles/mizu.dir/src/performance/performance.c.obj: CMakeFiles/mizu.dir/includes_C.rsp
 CMakeFiles/mizu.dir/src/performance/performance.c.obj: ../src/performance/performance.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/mizu.dir/src/performance/performance.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/mizu.dir/src/performance/performance.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\mizu.dir\src\performance\performance.c.obj   -c "C:\Users\Opact\Desktop\mizu engine\engine\src\performance\performance.c"
 
 CMakeFiles/mizu.dir/src/performance/performance.c.i: cmake_force
@@ -410,6 +438,7 @@ mizu_OBJECTS = \
 "CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj" \
 "CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj" \
 "CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj" \
+"CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj" \
 "CMakeFiles/mizu.dir/src/renderer/renderer.c.obj" \
 "CMakeFiles/mizu.dir/src/renderer/context/context.c.obj" \
 "CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj" \
@@ -418,6 +447,7 @@ mizu_OBJECTS = \
 "CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj" \
 "CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj" \
 "CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj" \
+"CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj" \
 "CMakeFiles/mizu.dir/src/math/mat4.c.obj" \
 "CMakeFiles/mizu.dir/src/math/vector.c.obj" \
 "CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj" \
@@ -437,6 +467,7 @@ libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/shader.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/texture.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj
+libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/uniform_buffer.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/renderer.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/context/context.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/context/api/opengl_context.c.obj
@@ -445,6 +476,7 @@ libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_vertex_buffer.c.
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_shader.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_index_buffer.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_texture.c.obj
+libmizu.dll: CMakeFiles/mizu.dir/src/renderer/object/opengl/ogl_uniform_buffer.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/math/mat4.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/src/math/vector.c.obj
 libmizu.dll: CMakeFiles/mizu.dir/C_/Users/Opact/Desktop/mizu_engine/vendor/src/glad.c.obj
@@ -454,7 +486,7 @@ libmizu.dll: CMakeFiles/mizu.dir/build.make
 libmizu.dll: CMakeFiles/mizu.dir/linklibs.rsp
 libmizu.dll: CMakeFiles/mizu.dir/objects1.rsp
 libmizu.dll: CMakeFiles/mizu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Linking C shared library libmizu.dll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Opact\Desktop\mizu engine\engine\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Linking C shared library libmizu.dll"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mizu.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
