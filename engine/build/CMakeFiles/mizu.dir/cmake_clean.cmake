@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/mizu.dir/src/math/mat4.c.obj"
   "CMakeFiles/mizu.dir/src/math/vector.c.obj"
   "CMakeFiles/mizu.dir/src/memory/mmemory.c.obj"
+  "CMakeFiles/mizu.dir/src/mesh/mesh.c.obj"
   "CMakeFiles/mizu.dir/src/performance/performance.c.obj"
   "CMakeFiles/mizu.dir/src/platform/platform.c.obj"
   "CMakeFiles/mizu.dir/src/platform/platform_backend.c.obj"

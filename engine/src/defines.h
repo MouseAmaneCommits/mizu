@@ -1,6 +1,7 @@
 #pragma once
 
 #define QUICK_MALLOC(X) (X*)malloc(sizeof(X))
+#define CREATE(type, func, name) type* name = QUICK_MALLOC(type); func;
 
 /*- Typedefs -*/
 typedef void (*fn_ptr);

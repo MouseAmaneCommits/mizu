@@ -20,4 +20,5 @@ src/math/mat4.c src/math/vector.c
 ../vendor/src/glad.c
 src/scripting/script.c
 src/performance/performance.c
+src/mesh/mesh.c
 )
