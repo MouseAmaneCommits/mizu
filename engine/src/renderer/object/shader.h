@@ -21,3 +21,4 @@ typedef struct {
 }m_shader;
 
 MAPI void m_init_shader(m_shader* shader, const char* vertex_shader_name, const char* fragment_shader_name);
+MAPI void m_destroy_shader(m_shader* shader);

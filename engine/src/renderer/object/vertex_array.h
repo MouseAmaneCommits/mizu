@@ -25,3 +25,4 @@ typedef struct {
 }m_vertex_array;
 
 MAPI void m_init_vertex_array(m_vertex_array* vao);
+MAPI void m_destroy_vertex_array(m_vertex_array* vao);

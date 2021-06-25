@@ -20,3 +20,4 @@ typedef struct {
 }m_vertex_buffer;
 
 MAPI void m_init_vertex_buffer(m_vertex_buffer* vbo, float* vertices, u32 size);
+MAPI void m_destory_vertex_buffer(m_vertex_buffer* vbo);

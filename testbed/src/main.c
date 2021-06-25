@@ -13,29 +13,6 @@
 #include <windows.h>
 #include <sys/time.h>
 #include <glad/glad.h>
-
-f32 vertices[] = {
-     0.5f,  0.5f, 0.0f,
-     0.5f, -0.5f, 0.0f,
-    -0.5f, -0.5f, 0.0f,
-    -0.5f,  0.5f, 0.0f 
-};
-f32 texture_coords[] = {
-    // texture coords
-    1.0f, 1.0f,   // top right
-    1.0f, 0.0f,   // bottom ri
-    0.0f, 0.0f,   // bottom le
-    0.0f, 1.0f    // top left 
-};
-
-u32 indices[] = {
-    0, 1, 3,   
-    1, 2, 3    
-};  
-
-
-
-
     const static f32 vertices_cube[] =
     {
     -1.0f,-1.0f,-1.0f, // triangle 1 : begin
@@ -119,51 +96,18 @@ u32 indices[] = {
 static m_camera* camera;
 static m_mesh* mesh;
 
-// void init_other_vao(){
-//     m_vertex_buffer_layout layout;
-//     layout.index = 0;
-//     layout.size = 3;
-
-//     m_init_vertex_array(&other_test);
-
-//     m_vertex_buffer* buf = QUICK_MALLOC(m_vertex_buffer);
-//     memset(buf, 0, sizeof(m_vertex_buffer));
-//     m_init_vertex_buffer(buf, vertices, sizeof(vertices));
-//     buf->set_layout(buf, &layout);
-
-//     layout.index = 1;
-//     layout.size = 2;
-
-//     m_vertex_buffer* tbuf = QUICK_MALLOC(m_vertex_buffer);
-//     memset(tbuf, 0, sizeof(m_vertex_buffer));
-//     m_init_vertex_buffer(tbuf, texture_coords, sizeof(texture_coords));
-//     tbuf->set_layout(tbuf, &layout);
-    
-//     m_index_buffer* ibo = QUICK_MALLOC(m_index_buffer);
-//     memset(ibo, 0, sizeof(m_index_buffer));
-//     m_init_index_buffer(ibo, indices, sizeof(indices));
-
-//     other_test.add_vbo(&other_test, buf);
-//     other_test.add_vbo(&other_test, tbuf);
-//     other_test.bind_ibo(&other_test, ibo);
-
-//     m_init_shader(&shader_other_test, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
-// }
-
 void fl_start(){
     camera = QUICK_MALLOC(m_camera);
-    memset(camera, 0, sizeof(m_camera));
     camera->view = m_identity_matrix();
     camera->proj = m_perspective(1280/720, to_radians(10), from_radians(0.1f), from_radians(1000.0f));
     camera->o_clear_color[0] = 0.0f; camera->o_clear_color[1] = 0.5f; camera->o_clear_color[2] = 1.0f; camera->o_clear_color[3] = 0.0f;
     m_bind_camera(camera);
 
+
     m_properties* properties = QUICK_MALLOC(m_properties);
-    memset(properties, 0, sizeof(m_properties));
     properties->pos = m_init_vec3(0, 0, 0);
     properties->sca = m_init_vec3(1, 1, 1);
     
-
     CREATE(m_texture, m_init_texture(texture, 0, "angel.jpg"), texture);
     properties->material = QUICK_MALLOC(m_material);
     properties->material->t_albedo = texture;

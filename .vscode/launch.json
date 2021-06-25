@@ -7,7 +7,8 @@
             "request": "launch",
             "program": "${workspaceFolder}/testbed/build/testbed.exe",
             "cwd": "${workspaceFolder}",
-            "logging": {"engineLogging": true}
+            "logging": {"engineLogging": true},
+            "externalConsole": true
         },
         {
             "name": "Launch Editor",
@@ -15,7 +16,8 @@
             "request": "launch",
             "program": "${workspaceFolder}/editor/build/editor.exe",
             "cwd": "${workspaceFolder}",
-            "logging": {"engineLogging": true}
+            "logging": {"engineLogging": true},
+            "externalConsole": true
         }
     ]    
 }

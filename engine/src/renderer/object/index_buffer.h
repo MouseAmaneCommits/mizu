@@ -13,3 +13,4 @@ typedef struct {
 }m_index_buffer;
 
 MAPI void m_init_index_buffer(m_index_buffer* ibo, u32* indices, u32 size);
+MAPI void m_destroy_index_buffer(m_index_buffer* ibo);

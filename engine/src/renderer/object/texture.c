@@ -9,3 +9,11 @@ void m_init_texture(m_texture* texture, u32 bind_slot, const char* filename){
             break;
     }
 }
+
+void m_destroy_texture(m_texture* texture){
+    switch(m_renderer_get_api()){
+        case OPENGL:
+            m_destroy_texture(texture);
+            break;
+    }
+}

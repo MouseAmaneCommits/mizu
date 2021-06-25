@@ -14,3 +14,4 @@ typedef struct {
 }m_texture;
 
 MAPI void m_init_texture(m_texture* texture, u32 bind_slot, const char* filename);
+MAPI void m_destroy_texture(m_texture* texture);

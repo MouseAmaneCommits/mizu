@@ -11,3 +11,11 @@ void m_init_vertex_array(m_vertex_array* vao){
             break;
     }
 }
+
+void m_destroy_vertex_array(m_vertex_array* vao){
+    switch(m_renderer_get_api()){
+        case OPENGL:
+            m_destroy_vertex_array_opengl(vao);
+            break;
+    }
+}
