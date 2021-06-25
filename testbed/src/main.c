@@ -117,7 +117,7 @@ u32 indices[] = {
     };
 
 static m_camera* camera;
-static mat4 test_model; static m_mesh* mesh; static m_texture* tex;
+static m_mesh* mesh;
 
 // void init_other_vao(){
 //     m_vertex_buffer_layout layout;
@@ -151,25 +151,23 @@ static mat4 test_model; static m_mesh* mesh; static m_texture* tex;
 // }
 
 void fl_start(){
-
-    // init_other_vao();
-    test_model = m_identity_matrix();
-
     camera = QUICK_MALLOC(m_camera);
     memset(camera, 0, sizeof(m_camera));
     camera->view = m_identity_matrix();
-    //camera->proj = m_orthographic(-1, 1, -1, 1, 0.01f, 1000.0f);
     camera->proj = m_perspective(1280/720, to_radians(10), from_radians(0.1f), from_radians(1000.0f));
     camera->o_clear_color[0] = 0.0f; camera->o_clear_color[1] = 0.5f; camera->o_clear_color[2] = 1.0f; camera->o_clear_color[3] = 0.0f;
     m_bind_camera(camera);
 
     m_properties* properties = QUICK_MALLOC(m_properties);
     memset(properties, 0, sizeof(m_properties));
-
-    mesh = m_create_plane(properties);
+    properties->pos = m_init_vec3(0, 0, 0);
+    properties->sca = m_init_vec3(1, 1, 1);
+    
 
     CREATE(m_texture, m_init_texture(texture, 0, "angel.jpg"), texture);
-    tex = texture;
+    properties->material = QUICK_MALLOC(m_material);
+    properties->material->t_albedo = texture;
+    mesh = m_create_plane(properties);
 }
 
 void fl_update(){
@@ -186,10 +184,9 @@ void fl_update(){
        m_translate_camera(camera, m_init_vec3(0.1f, 0, 0));
     }
 
-    m_rotate_matrix(&test_model, m_init_vec3(0.01, 0, 0));
+    m_rotate_matrix(&mesh->model, m_init_vec3(0.01, 0, 0));
 
-    m_submit_with_texture(mesh->vao, mesh->shader, tex, &test_model);
-    // m_submit_with_texture(&test, &shader_other_test, &texture, &other_test_model);
+    mesh->draw(mesh);
 }
 
 void fl_stop(){

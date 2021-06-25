@@ -149,6 +149,12 @@ void m_scale_matrix(mat4* left, float scale_factor){
     left->matrix[2][2] *= scale_factor;
 }
 
+void m_scale_matrix_vec3(mat4* left, vec3 value){
+    left->matrix[0][0] *= value.x;
+    left->matrix[1][1] *= value.y;
+    left->matrix[2][2] *= value.z;
+}
+
 float* m_convert_matrix_to_float_array(mat4 mat){
     float* array = malloc(sizeof(float) * 16);
     memset(array, 0, sizeof(float) * 16);

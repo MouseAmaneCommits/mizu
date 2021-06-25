@@ -3,6 +3,15 @@
 #include <memory.h>
 #include <malloc.h>
 
+#include "../renderer/renderer.h"
+
+static void mesh_draw(m_mesh* mesh){
+    if(mesh->material->t_albedo == NULL)
+        m_submit(mesh->vao, mesh->shader, &mesh->model);
+    else
+        m_submit_with_texture(mesh->vao, mesh->shader, mesh->material->t_albedo, &mesh->model);
+}
+
 m_mesh* m_create_plane(m_properties* properties){
     // allocations
     m_mesh* mesh = QUICK_MALLOC(m_mesh);
@@ -35,6 +44,8 @@ m_mesh* m_create_plane(m_properties* properties){
     layout.size = 3;
 
     // initializations
+    mesh->draw = mesh_draw;
+
     m_init_vertex_array(mesh->vao);
     m_init_shader(mesh->shader, "vertex_shader.vs.glsl", "fragment_shader.fs.glsl");
     CREATE(m_vertex_buffer, m_init_vertex_buffer(vbo, vertices, sizeof(vertices)), vbo);
@@ -46,6 +57,13 @@ m_mesh* m_create_plane(m_properties* properties){
     mesh->vao->add_vbo(mesh->vao, vbo);
     mesh->vao->add_vbo(mesh->vao, tvbo);
     mesh->vao->bind_ibo(mesh->vao, ibo);
+
+    mesh->material = QUICK_MALLOC(m_material);
+    memcpy(mesh->material, properties->material, sizeof(m_material));
+
+    mesh->model = m_identity_matrix();
+    m_translate_matrix(&mesh->model, properties->pos);
+    m_scale_matrix_vec3(&mesh->model, properties->sca);
 
     return mesh;
 }

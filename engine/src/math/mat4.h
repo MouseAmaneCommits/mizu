@@ -22,6 +22,7 @@ MAPI mat4 m_sub_matrix(mat4 left, mat4 right);
 MAPI void m_translate_matrix(mat4* left, vec3 value);
 MAPI void m_rotate_matrix(mat4* left, vec3 value);
 MAPI void m_scale_matrix(mat4* left, float scale_factor);
+MAPI void m_scale_matrix_vec3(mat4* left, vec3 value);
 
 MAPI mat4 m_mul_matrix(mat4 left, mat4 right);
 

@@ -52,11 +52,14 @@ CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/math/transform.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/math/vector.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/mesh/mesh.c
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/mesh/mesh.h
+CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/platform/platform.h
+CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/context/context.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/object/index_buffer.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/object/shader.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/object/texture.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/object/vertex_array.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/object/vertex_buffer.h
+CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/renderer.h
 
 CMakeFiles/mizu.dir/src/performance/performance.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/performance/performance.c.obj: ../src/performance/performance.c

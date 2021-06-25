@@ -2,11 +2,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
-            "type": "cppvsdbg",
+            "name": "Launch Testbed",
+            "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/testbed/build/testbed.exe",
-
+            "cwd": "${workspaceFolder}",
+            "logging": {"engineLogging": true}
+        },
+        {
+            "name": "Launch Editor",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/editor/build/editor.exe",
+            "cwd": "${workspaceFolder}",
+            "logging": {"engineLogging": true}
         }
     ]    
 }
