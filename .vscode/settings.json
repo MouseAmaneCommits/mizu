@@ -16,6 +16,9 @@
         "entity.h": "c",
         "malloc.h": "c"
     },
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#fcba03"
+    },
     "editor.cursorStyle": "block",
     "editor.cursorSmoothCaretAnimation": true,
     "editor.cursorBlinking": "expand",

@@ -96,22 +96,32 @@
 static m_camera* camera;
 static m_mesh* mesh;
 
+#include "../../engine/src/utils/array.h"
+
+void print_array(m_array* array){
+    for(u32 i = 0; i < array->index; i++){
+        printf("%i\n", array->array[i]);
+    }
+}
+
 void fl_start(){
     camera = QUICK_MALLOC(m_camera);
     camera->view = m_identity_matrix();
-    camera->proj = m_perspective(1280/720, to_radians(10), from_radians(0.1f), from_radians(1000.0f));
+    //camera->proj = m_perspective(1280/720, to_radians(10), from_radians(0.1f), from_radians(1000.0f));
+    camera->proj = m_orthographic(-1, 1, -1, 1, 0.001f, 1000.0f);
     camera->o_clear_color[0] = 0.0f; camera->o_clear_color[1] = 0.5f; camera->o_clear_color[2] = 1.0f; camera->o_clear_color[3] = 0.0f;
     m_bind_camera(camera);
 
 
     m_properties* properties = QUICK_MALLOC(m_properties);
     properties->pos = m_init_vec3(0, 0, 0);
-    properties->sca = m_init_vec3(1, 1, 1);
+    properties->sca = m_init_vec3(0.1f, 0.1f, 0.1f);
     
-    CREATE(m_texture, m_init_texture(texture, 0, "angel.jpg"), texture);
+    CREATE(m_texture, m_init_texture(texture, 0, "brik.png"), texture);
     properties->material = QUICK_MALLOC(m_material);
     properties->material->t_albedo = texture;
     mesh = m_create_plane(properties);
+    mesh = m_load_from_file("sponza.obj", properties);
 }
 
 void fl_update(){
@@ -127,8 +137,14 @@ void fl_update(){
     if(GetAsyncKeyState('A')){
        m_translate_camera(camera, m_init_vec3(0.1f, 0, 0));
     }
+    if(GetAsyncKeyState('E')){
+       m_translate_camera(camera, m_init_vec3(0, -0.1f, 0));
+    }
+    if(GetAsyncKeyState('Q')){
+       m_translate_camera(camera, m_init_vec3(0, 0.1f, 0));
+    }
 
-    m_rotate_matrix(&mesh->model, m_init_vec3(0.01, 0, 0));
+    // m_rotate_matrix(&mesh->model, m_init_vec3(0.01, 0, 0));
 
     mesh->draw(mesh);
 }

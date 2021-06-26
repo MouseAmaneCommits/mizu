@@ -44,6 +44,8 @@ CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/memory/mmemory.c
 CMakeFiles/mizu.dir/src/memory/mmemory.c.obj: ../src/memory/mmemory.h
 
+CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../../vendor/include/fastobj.h
+CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/core/logger.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/core/optional.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/math/mat4.h
@@ -60,6 +62,7 @@ CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/object/texture.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/object/vertex_array.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/object/vertex_buffer.h
 CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/renderer/renderer.h
+CMakeFiles/mizu.dir/src/mesh/mesh.c.obj: ../src/utils/array.h
 
 CMakeFiles/mizu.dir/src/performance/performance.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/performance/performance.c.obj: ../src/performance/performance.c
@@ -271,4 +274,8 @@ CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/renderer.h
 CMakeFiles/mizu.dir/src/scripting/script.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/scripting/script.c.obj: ../src/scripting/script.c
 CMakeFiles/mizu.dir/src/scripting/script.c.obj: ../src/scripting/script.h
+
+CMakeFiles/mizu.dir/src/utils/array.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/utils/array.c.obj: ../src/utils/array.c
+CMakeFiles/mizu.dir/src/utils/array.c.obj: ../src/utils/array.h
 

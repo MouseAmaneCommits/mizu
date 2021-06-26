@@ -8,7 +8,8 @@ include_directories(../vendor/include)
 
 option(CMAKE_USE_WIN32_THREADS_INIT "using WIN32 threads" ON)
 
-add_library(mizu SHARED 
+add_library(mizu SHARED
+src/utils/array.c 
 src/core/logger.c 
 src/memory/mmemory.c
 src/platform/platform.c src/platform/platform_backend.c 

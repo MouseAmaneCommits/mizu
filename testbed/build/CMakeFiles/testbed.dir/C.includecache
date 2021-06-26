@@ -158,6 +158,10 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
 object/texture.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/texture.h
 
+C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
 C:/Users/Opact/Desktop/mizu engine/testbed/src/main.c
 ../../engine/src/core/application.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.h
@@ -187,4 +191,6 @@ sys/time.h
 -
 glad/glad.h
 -
+../../engine/src/utils/array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
 

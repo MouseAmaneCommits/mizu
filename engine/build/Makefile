@@ -844,6 +844,33 @@ src/scripting/script.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scripting/script.c.s
 .PHONY : src/scripting/script.c.s
 
+src/utils/array.obj: src/utils/array.c.obj
+
+.PHONY : src/utils/array.obj
+
+# target to build an object file
+src/utils/array.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/utils/array.c.obj
+.PHONY : src/utils/array.c.obj
+
+src/utils/array.i: src/utils/array.c.i
+
+.PHONY : src/utils/array.i
+
+# target to preprocess a source file
+src/utils/array.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/utils/array.c.i
+.PHONY : src/utils/array.c.i
+
+src/utils/array.s: src/utils/array.c.s
+
+.PHONY : src/utils/array.s
+
+# target to generate assembly for a file
+src/utils/array.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/utils/array.c.s
+.PHONY : src/utils/array.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -931,6 +958,9 @@ help:
 	@echo ... src/scripting/script.obj
 	@echo ... src/scripting/script.i
 	@echo ... src/scripting/script.s
+	@echo ... src/utils/array.obj
+	@echo ... src/utils/array.i
+	@echo ... src/utils/array.s
 .PHONY : help
 
 

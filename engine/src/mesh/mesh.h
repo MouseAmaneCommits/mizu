@@ -30,4 +30,5 @@ typedef struct{
     void(*draw)(struct m_mesh*);
 }m_mesh;
 
+MAPI m_mesh* m_load_from_file(const char* filename, m_properties* properties);
 MAPI m_mesh* m_create_plane(m_properties* properties);
