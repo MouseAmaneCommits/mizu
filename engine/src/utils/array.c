@@ -27,3 +27,11 @@ void m_pop_array(m_array* array){
     }
     array->index--;
 }
+
+void m_remove_item(m_array* array, void* item){
+    for(u32 i = 0; i < array->size; i++){
+        if(memcmp(array->array[i], item, array->size_of_type)){
+            
+        }
+    }
+}

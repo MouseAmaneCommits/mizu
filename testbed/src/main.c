@@ -107,46 +107,51 @@ void print_array(m_array* array){
 void fl_start(){
     camera = QUICK_MALLOC(m_camera);
     camera->view = m_identity_matrix();
-    //camera->proj = m_perspective(1280/720, to_radians(10), from_radians(0.1f), from_radians(1000.0f));
-    camera->proj = m_orthographic(-1, 1, -1, 1, 0.001f, 1000.0f);
+    camera->proj = m_perspective(1280/720, to_radians(10), from_radians(0.1f), from_radians(1000.0f));
+    //camera->proj = m_orthographic(-1, 1, -1, 1, 0.001f, 1000.0f);
     camera->o_clear_color[0] = 0.0f; camera->o_clear_color[1] = 0.5f; camera->o_clear_color[2] = 1.0f; camera->o_clear_color[3] = 0.0f;
     m_bind_camera(camera);
 
 
     m_properties* properties = QUICK_MALLOC(m_properties);
     properties->pos = m_init_vec3(0, 0, 0);
-    properties->sca = m_init_vec3(0.1f, 0.1f, 0.1f);
+    properties->sca = m_init_vec3(1, 1, 1);
     
-    CREATE(m_texture, m_init_texture(texture, 0, "brik.png"), texture);
+    CREATE(m_texture, m_init_texture(texture, 0, "orangutan/orangutan_low_defaultMat_BaseColor.jpg"), texture);
     properties->material = QUICK_MALLOC(m_material);
     properties->material->t_albedo = texture;
-    mesh = m_create_plane(properties);
-    mesh = m_load_from_file("sponza.obj", properties);
+    mesh = m_load_from_file("orangutan/uploads_files_2142893_orangutan.obj", properties);
+
+    m_scene* scene = m_create_scene();
+    m_bind_scene(scene);
+    scene->add_mesh(scene, mesh);
 }
 
 void fl_update(){
-    if(GetAsyncKeyState('S')){
+    if(m_pressing_key('S')){
         m_translate_camera(camera, m_init_vec3(0, 0, -0.1f));
     }
-    if(GetAsyncKeyState('W')){
+    if(m_pressing_key('W')){
         m_translate_camera(camera, m_init_vec3(0, 0, 0.1f));
     }
-    if(GetAsyncKeyState('D')){
+    if(m_pressing_key('D')){
         m_translate_camera(camera, m_init_vec3(-0.1f, 0, 0));
     }
-    if(GetAsyncKeyState('A')){
+    if(m_pressing_key('A')){
        m_translate_camera(camera, m_init_vec3(0.1f, 0, 0));
     }
-    if(GetAsyncKeyState('E')){
+    if(m_pressing_key('E')){
        m_translate_camera(camera, m_init_vec3(0, -0.1f, 0));
     }
-    if(GetAsyncKeyState('Q')){
+    if(m_pressing_key('Q')){
        m_translate_camera(camera, m_init_vec3(0, 0.1f, 0));
     }
-
-    // m_rotate_matrix(&mesh->model, m_init_vec3(0.01, 0, 0));
-
-    mesh->draw(mesh);
+    if(m_pressing_key('C')){
+        m_rotate_matrix(&camera->view, m_init_vec3(0, -0.1f, 0));
+    }
+    if(m_pressing_key('Z')){
+        m_rotate_matrix(&camera->view, m_init_vec3(0, 0.1f, 0));
+    }
 }
 
 void fl_stop(){

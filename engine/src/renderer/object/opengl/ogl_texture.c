@@ -16,10 +16,13 @@ typedef struct {
 }internal_memory;
 
 static void ogl_bind(m_texture* self){
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glBindTextureUnit(self->bind_slot, ((internal_memory*)self->unimplemented_data)->id);
 }
 
 static void ogl_unbind(m_texture* self){
+    glDisable(GL_BLEND);
     glBindTextureUnit(self->bind_slot, 0);
 }
 
@@ -38,6 +41,8 @@ static void ogl_initialize(m_texture* self, const char* image){
 
     glTextureParameteri(id, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTextureParameteri(id, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTextureParameteri(id, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTextureParameteri(id, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
     glTextureSubImage2D(id, 0, 0, 0, self->width, self->height, GL_RGB, GL_UNSIGNED_BYTE, data);
 

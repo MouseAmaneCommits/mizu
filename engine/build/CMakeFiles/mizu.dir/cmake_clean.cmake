@@ -24,6 +24,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj"
   "CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj"
   "CMakeFiles/mizu.dir/src/renderer/renderer.c.obj"
+  "CMakeFiles/mizu.dir/src/scene/scene.c.obj"
+  "CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj"
   "CMakeFiles/mizu.dir/src/scripting/script.c.obj"
   "CMakeFiles/mizu.dir/src/utils/array.c.obj"
   "libmizu.dll"

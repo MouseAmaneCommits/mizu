@@ -30,6 +30,8 @@ CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engin
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/vertex_array.h
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/vertex_buffer.h
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/renderer.h
+CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/scene/scene.h
+CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/scene/scene_manager.h
 CMakeFiles/testbed.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/utils/array.h
 CMakeFiles/testbed.dir/src/main.c.obj: ../src/main.c
 

@@ -18,3 +18,6 @@ MAPI void m_init_platform(m_platform* platform, u32 x, u32 y, u32 width, u32 hei
 MAPI void m_update_platform(m_platform* platform);
 MAPI b8 m_closing_platform(m_platform* platform);
 MAPI void m_destroy_platform(m_platform* platform);
+
+/*input*/
+MAPI b16 m_pressing_key(char key);

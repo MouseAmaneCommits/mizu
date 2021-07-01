@@ -25,6 +25,8 @@ layer.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
 ../platform/platform.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+../scene/scene_manager.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene_manager.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
 ../defines.h
@@ -157,6 +159,22 @@ object/shader.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
 object/texture.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/texture.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+../mesh/mesh.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/mesh/mesh.h
+../utils/array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene_manager.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+scene.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene.h
+../utils/array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
 ../defines.h

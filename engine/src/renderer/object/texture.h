@@ -4,6 +4,10 @@
 
 struct m_texture;
 
+typedef enum{
+    REPEAT,CLAMP_BORDER
+}texture_mode;
+
 typedef struct {
     void* unimplemented_data;
     

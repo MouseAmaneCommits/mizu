@@ -24,6 +24,7 @@ typedef float f32;
 
 // booleans
 typedef int b32;
+typedef short b16;
 typedef char b8;
 
 

@@ -49,3 +49,11 @@ void m_destroy_platform(m_platform* self){
 
     free(self->unimplemented_data);
 }
+
+b16 m_pressing_key(char key){
+    #ifdef MIZU_PLATFORM_WINDOWS
+    return m_is_pressing_win32(key);
+    #elif MIZU_PLATFORM_LINUX
+    return m_is_pressing_linux(key);
+    #endif
+}

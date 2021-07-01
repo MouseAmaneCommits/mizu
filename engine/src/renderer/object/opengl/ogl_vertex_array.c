@@ -42,20 +42,23 @@ static void ogl_add_vbo(m_vertex_array* self, m_vertex_buffer* buffer){
 }
 
 static void ogl_draw(m_vertex_array* self){
-
-
-
     ogl_bind(self);
     for(u32 i = 0; i < self->vbo_index; i++){
         glEnableVertexAttribArray(self->vbos[i]->layout.index);
     }
     
     if(!self->ibo_bound){
-        glDrawArrays(GL_TRIANGLES, 0, self->vbos[0]->length/3);
+        if(self->o_primitive_type != PRIMITIVE_QUADS)
+            glDrawArrays(GL_TRIANGLES, 0, self->vbos[0]->length/3);
+        else
+            glDrawArrays(GL_QUADS, 0, self->vbos[0]->length/3); 
     }
     else{
         self->ibo->bind(self->ibo);
-        glDrawElements(GL_TRIANGLES, self->ibo->count, GL_UNSIGNED_INT, NULL);
+        if(self->o_primitive_type != PRIMITIVE_QUADS)
+            glDrawElements(GL_TRIANGLES, self->ibo->count, GL_UNSIGNED_INT, NULL);
+        else
+            glDrawElements(GL_QUADS, self->ibo->count, GL_UNSIGNED_INT, NULL);
         self->ibo->unbind(self->ibo);
     }
 

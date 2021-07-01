@@ -817,6 +817,60 @@ src/renderer/renderer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/renderer/renderer.c.s
 .PHONY : src/renderer/renderer.c.s
 
+src/scene/scene.obj: src/scene/scene.c.obj
+
+.PHONY : src/scene/scene.obj
+
+# target to build an object file
+src/scene/scene.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scene/scene.c.obj
+.PHONY : src/scene/scene.c.obj
+
+src/scene/scene.i: src/scene/scene.c.i
+
+.PHONY : src/scene/scene.i
+
+# target to preprocess a source file
+src/scene/scene.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scene/scene.c.i
+.PHONY : src/scene/scene.c.i
+
+src/scene/scene.s: src/scene/scene.c.s
+
+.PHONY : src/scene/scene.s
+
+# target to generate assembly for a file
+src/scene/scene.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scene/scene.c.s
+.PHONY : src/scene/scene.c.s
+
+src/scene/scene_manager.obj: src/scene/scene_manager.c.obj
+
+.PHONY : src/scene/scene_manager.obj
+
+# target to build an object file
+src/scene/scene_manager.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj
+.PHONY : src/scene/scene_manager.c.obj
+
+src/scene/scene_manager.i: src/scene/scene_manager.c.i
+
+.PHONY : src/scene/scene_manager.i
+
+# target to preprocess a source file
+src/scene/scene_manager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scene/scene_manager.c.i
+.PHONY : src/scene/scene_manager.c.i
+
+src/scene/scene_manager.s: src/scene/scene_manager.c.s
+
+.PHONY : src/scene/scene_manager.s
+
+# target to generate assembly for a file
+src/scene/scene_manager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mizu.dir\build.make CMakeFiles/mizu.dir/src/scene/scene_manager.c.s
+.PHONY : src/scene/scene_manager.c.s
+
 src/scripting/script.obj: src/scripting/script.c.obj
 
 .PHONY : src/scripting/script.obj
@@ -955,6 +1009,12 @@ help:
 	@echo ... src/renderer/renderer.obj
 	@echo ... src/renderer/renderer.i
 	@echo ... src/renderer/renderer.s
+	@echo ... src/scene/scene.obj
+	@echo ... src/scene/scene.i
+	@echo ... src/scene/scene.s
+	@echo ... src/scene/scene_manager.obj
+	@echo ... src/scene/scene_manager.i
+	@echo ... src/scene/scene_manager.s
 	@echo ... src/scripting/script.obj
 	@echo ... src/scripting/script.i
 	@echo ... src/scripting/script.s

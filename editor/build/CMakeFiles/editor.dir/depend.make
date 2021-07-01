@@ -8,6 +8,20 @@ CMakeFiles/editor.dir/src/main.c.obj: ../src/editor.h
 CMakeFiles/editor.dir/src/main.c.obj: ../src/main.c
 CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/core/application.h
 CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/core/layer.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/core/optional.h
 CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/defines.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/math/mat4.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/math/math.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/math/transform.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/math/vector.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/mesh/mesh.h
 CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/platform/platform.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/index_buffer.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/shader.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/texture.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/vertex_array.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/renderer/object/vertex_buffer.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/scene/scene.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/scene/scene_manager.h
+CMakeFiles/editor.dir/src/main.c.obj: C:/Users/Opact/Desktop/mizu\ engine/engine/src/utils/array.h
 

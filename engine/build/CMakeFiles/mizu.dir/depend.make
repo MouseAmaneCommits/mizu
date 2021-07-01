@@ -9,12 +9,14 @@ CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/core/application.c
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/core/application.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/core/layer.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/core/logger.h
+CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/core/optional.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/math/mat4.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/math/math.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/math/transform.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/math/vector.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/memory/mmemory.h
+CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/mesh/mesh.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/platform/platform.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/renderer/context/context.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/renderer/object/index_buffer.h
@@ -23,6 +25,9 @@ CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/renderer/object/texture.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/renderer/object/vertex_array.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/renderer/object/vertex_buffer.h
 CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/renderer/renderer.h
+CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/scene/scene.h
+CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/scene/scene_manager.h
+CMakeFiles/mizu.dir/src/core/application.c.obj: ../src/utils/array.h
 
 CMakeFiles/mizu.dir/src/core/logger.c.obj: ../src/core/logger.c
 CMakeFiles/mizu.dir/src/core/logger.c.obj: ../src/core/logger.h
@@ -270,6 +275,40 @@ CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/object/vertex_a
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/object/vertex_buffer.h
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/renderer.c
 CMakeFiles/mizu.dir/src/renderer/renderer.c.obj: ../src/renderer/renderer.h
+
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/core/optional.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/math/mat4.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/math/math.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/math/transform.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/math/vector.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/mesh/mesh.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/renderer/object/index_buffer.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/renderer/object/shader.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/renderer/object/texture.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/renderer/object/vertex_array.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/renderer/object/vertex_buffer.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/scene/scene.c
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/scene/scene.h
+CMakeFiles/mizu.dir/src/scene/scene.c.obj: ../src/utils/array.h
+
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/core/logger.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/core/optional.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/defines.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/math/mat4.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/math/math.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/math/transform.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/math/vector.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/mesh/mesh.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/renderer/object/index_buffer.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/renderer/object/shader.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/renderer/object/texture.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/renderer/object/vertex_array.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/renderer/object/vertex_buffer.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/scene/scene.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/scene/scene_manager.c
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/scene/scene_manager.h
+CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj: ../src/utils/array.h
 
 CMakeFiles/mizu.dir/src/scripting/script.c.obj: ../src/defines.h
 CMakeFiles/mizu.dir/src/scripting/script.c.obj: ../src/scripting/script.c

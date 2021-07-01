@@ -30,5 +30,7 @@ typedef struct{
     void(*draw)(struct m_mesh*);
 }m_mesh;
 
+/* If load from file, no need to fill out material in properties */
+// MAPI m_array* m_load_meshes_from_file(const char* filename, m_properties* properties);
 MAPI m_mesh* m_load_from_file(const char* filename, m_properties* properties);
 MAPI m_mesh* m_create_plane(m_properties* properties);

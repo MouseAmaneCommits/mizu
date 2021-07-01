@@ -46,6 +46,7 @@ void m_run_application(m_application* self, u32 x, u32 y, u32 width, u32 height,
         for(u32 i = 0; i < self->layer_index; i++){
             self->layers[i]->update();
         }
+        m_update_scene_manager();
         
         m_flush();
         m_end_frame();

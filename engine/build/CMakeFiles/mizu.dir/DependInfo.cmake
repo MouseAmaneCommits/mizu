@@ -29,6 +29,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/object/vertex_array.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/object/vertex_buffer.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/renderer/renderer.c.obj"
+  "C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/scene/scene.c.obj"
+  "C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene_manager.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/scene/scene_manager.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/scripting/script.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/scripting/script.c.obj"
   "C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.c" "C:/Users/Opact/Desktop/mizu engine/engine/build/CMakeFiles/mizu.dir/src/utils/array.c.obj"
   )

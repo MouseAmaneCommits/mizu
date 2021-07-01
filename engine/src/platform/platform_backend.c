@@ -98,3 +98,13 @@ b8 m_closing_win32(m_platform* self){
 b8 m_closing_linux(m_platform* self){
     
 }
+
+ b16 m_is_pressing_win32(char key){
+    #ifdef MIZU_PLATFORM_WINDOWS
+    return GetAsyncKeyState(key);
+    #endif
+ }
+
+ b16 m_is_pressing_linux(char key){
+
+ }

@@ -3,6 +3,7 @@
 #include "../defines.h"
 #include "layer.h"
 #include "../platform/platform.h"
+#include "../scene/scene_manager.h"
 
 #define MAX_LAYER_COUNT 16
 
