@@ -29,9 +29,31 @@ void m_pop_array(m_array* array){
 }
 
 void m_remove_item(m_array* array, void* item){
-    for(u32 i = 0; i < array->size; i++){
-        if(memcmp(array->array[i], item, array->size_of_type)){
-            
+    b8 found = FALSE;
+    u32 index_to_remove = 0;
+
+    for(u32 i = 0; i < array->current_count; i++){
+        if(array->array[i] == item){
+            found = TRUE;
+            index_to_remove = i;
         }
     }
+
+    array->current_count--;
+    
+    for(u32 i = index_to_remove; i < array->current_count; i++){
+        array->array[i] = array->array[i+1];
+    }
+
+    array->index--;
+}
+
+void m_remove_item_at_index(m_array* array, u32 index){
+    array->current_count--;
+    
+    for(u32 i = index; i < array->current_count; i++){
+        array->array[i] = array->array[i+1];
+    }
+
+    array->index--;
 }

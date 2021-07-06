@@ -6,6 +6,42 @@
 
 #IncludeRegexTransform: 
 
+../../vendor/include/fastobj.h
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.c
+application.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.h
+../renderer/renderer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
+../memory/mmemory.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/memory/mmemory.h
+sys/time.h
+-
+malloc.h
+-
+logger.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/application.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+layer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
+../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+../scene/scene_manager.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene_manager.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/layer.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
@@ -40,6 +76,32 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/math/vector.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
+C:/Users/Opact/Desktop/mizu engine/engine/src/memory/mmemory.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+stdlib.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/memory/stdlib.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/mesh/mesh.c
+mesh.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/mesh/mesh.h
+memory.h
+-
+malloc.h
+-
+../renderer/renderer.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
+../core/logger.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/core/logger.h
+../utils/array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
+stdio.h
+-
+stdlib.h
+-
+fastobj.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/mesh/fastobj.h
+
 C:/Users/Opact/Desktop/mizu engine/engine/src/mesh/mesh.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
@@ -55,6 +117,16 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/texture.h
 ../core/optional.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/core/optional.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
+../../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+../../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/index_buffer.h
 ../../defines.h
@@ -82,6 +154,28 @@ C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_buffer.h
 ../../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
 
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/renderer.h
+context/context.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/context/context.h
+../defines.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
+../platform/platform.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/platform/platform.h
+object/vertex_array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/vertex_array.h
+object/shader.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/shader.h
+object/texture.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/renderer/object/texture.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene.c
+scene.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene.h
+malloc.h
+-
+memory.h
+-
+
 C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene.h
 ../defines.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/defines.h
@@ -105,6 +199,14 @@ scene.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/scene/scene.h
 ../utils/array.h
 C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
+
+C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.c
+array.h
+C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
+malloc.h
+-
+memory.h
+-
 
 C:/Users/Opact/Desktop/mizu engine/engine/src/utils/array.h
 ../defines.h

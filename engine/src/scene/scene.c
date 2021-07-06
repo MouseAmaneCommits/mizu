@@ -8,7 +8,7 @@ static void add_mesh(m_scene* scene, m_mesh* mesh){
 }
 
 static void remove_mesh(m_scene* scene, m_mesh* mesh){
-    // TODO: to be added
+    m_remove_item(scene->meshes, mesh);
 }
 
 m_scene* m_create_scene(){
