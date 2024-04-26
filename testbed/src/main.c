@@ -117,10 +117,10 @@ void fl_start(){
     properties->pos = m_init_vec3(0, 0, 0);
     properties->sca = m_init_vec3(1, 1, 1);
     
-    CREATE(m_texture, m_init_texture(texture, 0, "orangutan/orangutan_low_defaultMat_BaseColor.jpg"), texture);
+    CREATE(m_texture, m_init_texture(texture, 0, "angel.jpg"), texture);
     properties->material = QUICK_MALLOC(m_material);
     properties->material->t_albedo = texture;
-    mesh = m_load_from_file("orangutan/uploads_files_2142893_orangutan.obj", properties);
+    mesh = m_load_from_file("sponza.obj", properties);
 
     m_scene* scene = m_create_scene();
     m_bind_scene(scene);
@@ -151,6 +151,9 @@ void fl_update(){
     }
     if(m_pressing_key('Z')){
         m_rotate_matrix(&camera->view, m_init_vec3(0, 0.1f, 0));
+    }
+    if(m_pressing_key('T')){
+        m_rotate_matrix(&mesh->model, m_init_vec3(0, 0.1f, 0));
     }
 }
 

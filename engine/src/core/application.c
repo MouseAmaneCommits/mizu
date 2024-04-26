@@ -19,13 +19,13 @@ void m_push_application_layer(m_application* self, m_layer* layer){
 }
 
 void m_run_application(m_application* self, u32 x, u32 y, u32 width, u32 height, const char* title){
+    // Self initialization of members.
     self->x = x;
     self->y = y;
     self->width = width;
     self->height = height;
     self->title = title;
 
-    //self->platform = (m_platform*)malloc(sizeof(m_platform));
     m_init_platform(&self->platform, self->x, self->y, self->width, self->height, self->title);
 
     m_init_renderer(&self->platform, OPENGL);

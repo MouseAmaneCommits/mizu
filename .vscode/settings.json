@@ -20,7 +20,7 @@
         "editorCursor.foreground": "#fcba03"
     },
     "editor.cursorStyle": "block",
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorBlinking": "expand",
     "intelOneAPI.analysis.binary-path": "c:\\Users\\Opact\\Desktop\\mizu engine\\testbed\\build\\testbed.exe",
     "intelOneAPI.analysis.vtune.install-root": "C:\\Program Files (x86)\\intel\\oneAPI\\vtune\\latest",

@@ -63,6 +63,52 @@ static void mesh_draw(m_mesh* mesh){
 //     }
 // }
 
+m_mesh* load_obj(const char* filename, m_properties* properties){
+    m_array temp_vertices; m_start_array(&temp_vertices, sizeof(float), 90);
+    m_array temp_uvs; m_start_array(&temp_uvs, sizeof(float), 90);
+    m_array temp_normals; m_start_array(&temp_normals, sizeof(float), 90);
+
+    m_array vertex_indices; m_start_array(&vertex_indices, sizeof(unsigned int), 90);
+    m_array uv_indices; m_start_array(&uv_indices, sizeof(unsigned int), 90);
+    m_array normal_indices; m_start_array(&normal_indices, sizeof(unsigned int), 90);
+    
+    FILE* file = fopen(filename, "r");
+    if(file == NULL){
+        M_ERROR("Failed to load file!");
+        return NULL;
+    }
+
+    while(TRUE){
+        char lineHeader[128];
+
+        int res = fscanf(file, "%s", lineHeader);
+
+        if(res == EOF)
+        break;
+
+        if(strcmp(lineHeader, "v") == 0){
+            float vertex[3];
+            fscanf(file, "%f %f %f\n", &vertex[0], &vertex[1], &vertex[2]);
+            m_push_array(&temp_vertices, &vertex[0]);
+            m_push_array(&temp_vertices, &vertex[1]);
+            m_push_array(&temp_vertices, &vertex[2]);
+        }
+        else if(strcmp(lineHeader, "vt") == 0){
+            float uv[2];
+            fscanf(file, "%f %f\n", &uv[0], &uv[1]);
+            m_push_array(&temp_uvs, &uv[0]);
+            m_push_array(&temp_uvs, &uv[1]);
+        }
+        else if ( strcmp( lineHeader, "vn" ) == 0 ){
+            float normal[3];
+            fscanf(file, "%f %f %f\n", &normal[0], &normal[1], &normal[2]);
+            m_push_array(&temp_normals, &normal[0]);
+            m_push_array(&temp_normals, &normal[1]);
+            m_push_array(&temp_normals, &normal[2]);
+        }
+    }
+}
+
 m_mesh* m_load_from_file(const char* filename, m_properties* properties){
     m_primitive_type primitive_type;
     // allocations
